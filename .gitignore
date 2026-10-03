@@ -2,3 +2,6 @@ kn-build.log
 __pycache__/
 *.pyc
 _preview/
+node_modules/
+package-lock.json
+.tmp-e2e/
