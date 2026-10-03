@@ -1,11 +1,37 @@
-/* Kelas Nadi — service worker
-   Strategi: NETWORK-FIRST (supaya kemas kini terus nampak), cache sebagai sandaran offline.
-   Versi lama pakai cache-first — pengguna tersekat pada versi lama. Jangan ulang. */
-const CACHE = 'kelasnadi-v2';
-const ASSETS = ['./', './index.html', './style.css', './app.js', './content.json', './manifest.json'];
+/* Kelas Nadi — service worker (v4)
+   Strategi: NETWORK-FIRST + precache yang tahan 304.
+   - JANGAN kembali ke cache-first: pengguna akan tersekat pada versi lama.
+   - Precache mesti guna { cache: 'reload' } supaya dapat respons 200 penuh,
+     bukan 304 (respons 304 dulu ditolak → index.html & ikon tak masuk cache,
+     menyebabkan app gagal dibuka offline).
+   Jangan tukar senarai ASSETS tanpa mengemas kini tests/test_assets.py
+*/
+const CACHE = 'kelasnadi-v5';
+const ASSETS = [
+  './', './index.html', './style.css', './core.js', './app.js', './content.json', './manifest.json',
+  './version.json',
+  './icon-192.png', './icon-512.png', './icon-maskable-512.png', './apple-touch-icon-180.png', './favicon-32.png',
+];
+
+async function precache() {
+  const c = await caches.open(CACHE);
+  await Promise.all(ASSETS.map(async (url) => {
+    try {
+      const res = await fetch(url, { cache: 'reload' });
+      if (res && res.ok) await c.put(url, res);
+    } catch (e) { /* offline semasa install — runtime cache akan isi kemudian */ }
+  }));
+}
 
 self.addEventListener('install', (e) => {
-  e.waitUntil(caches.open(CACHE).then((c) => c.addAll(ASSETS)).then(() => self.skipWaiting()));
+  /* JANGAN skipWaiting di sini: biar versi baru MENUNGGU supaya app boleh
+     tunjuk "Versi baru tersedia" dengan jujur (elak amaran palsu). */
+  e.waitUntil(precache());
+});
+
+self.addEventListener('message', (e) => {
+  if (e.data && e.data.type === 'SKIP_WAITING') self.skipWaiting();
+  if (e.data && e.data.type === 'VERSION' && e.ports && e.ports[0]) e.ports[0].postMessage({ cache: CACHE });
 });
 
 self.addEventListener('activate', (e) => {
@@ -18,16 +44,32 @@ self.addEventListener('activate', (e) => {
 
 self.addEventListener('fetch', (e) => {
   const req = e.request;
-  if (req.method !== 'GET' || new URL(req.url).origin !== self.location.origin) return;
+  if (req.method !== 'GET') return;
+  let same = false;
+  try { same = new URL(req.url).origin === self.location.origin; } catch (err) { same = false; }
+  if (!same) return;   /* tiada permintaan pihak ketiga — privasi */
+
+  const fallback = async () => {
+    const hit = await caches.match(req, { ignoreSearch: req.mode === 'navigate' });
+    if (hit) return hit;
+    if (req.mode === 'navigate') {
+      return (await caches.match('./')) || (await caches.match('./index.html'));
+    }
+    return Response.error();
+  };
+
   e.respondWith(
-    fetch(req)
-      .then((res) => {
+    /* cache: 'no-cache' = wajib semak semula dengan pelayan (elak CSS/JS basi
+       daripada cache HTTP pelayar; python http.server tiada Cache-Control). */
+    fetch(req, { cache: 'no-cache' })
+      .then(async (res) => {
         if (res && res.status === 200) {
           const copy = res.clone();
-          caches.open(CACHE).then((c) => c.put(req, copy));
+          const c = await caches.open(CACHE);
+          c.put(req, copy);
         }
         return res;
       })
-      .catch(() => caches.match(req).then((hit) => hit || caches.match('./index.html')))
+      .catch(fallback)
   );
 });
