@@ -1,5 +1,7 @@
-/* Kelas Nadi — service worker: cache asas untuk kegunaan offline */
-const CACHE = 'kelasnadi-v1';
+/* Kelas Nadi — service worker
+   Strategi: NETWORK-FIRST (supaya kemas kini terus nampak), cache sebagai sandaran offline.
+   Versi lama pakai cache-first — pengguna tersekat pada versi lama. Jangan ulang. */
+const CACHE = 'kelasnadi-v2';
 const ASSETS = ['./', './index.html', './style.css', './app.js', './content.json', './manifest.json'];
 
 self.addEventListener('install', (e) => {
@@ -8,23 +10,24 @@ self.addEventListener('install', (e) => {
 
 self.addEventListener('activate', (e) => {
   e.waitUntil(
-    caches.keys().then((keys) => Promise.all(keys.filter((k) => k !== CACHE).map((k) => caches.delete(k))))
+    caches.keys()
+      .then((keys) => Promise.all(keys.filter((k) => k !== CACHE).map((k) => caches.delete(k))))
       .then(() => self.clients.claim())
   );
 });
 
 self.addEventListener('fetch', (e) => {
-  if (e.request.method !== 'GET') return;
+  const req = e.request;
+  if (req.method !== 'GET' || new URL(req.url).origin !== self.location.origin) return;
   e.respondWith(
-    caches.match(e.request).then((cached) => {
-      const net = fetch(e.request).then((res) => {
-        if (res && res.status === 200 && res.type === 'basic') {
+    fetch(req)
+      .then((res) => {
+        if (res && res.status === 200) {
           const copy = res.clone();
-          caches.open(CACHE).then((c) => c.put(e.request, copy));
+          caches.open(CACHE).then((c) => c.put(req, copy));
         }
         return res;
-      }).catch(() => cached);
-      return cached || net;
-    })
+      })
+      .catch(() => caches.match(req).then((hit) => hit || caches.match('./index.html')))
   );
 });

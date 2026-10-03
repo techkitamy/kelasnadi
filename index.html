@@ -3,44 +3,50 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#145b50">
+<meta name="theme-color" content="#ffcf4d">
 <link rel="manifest" href="manifest.json">
-<title>Kelas Nadi — Prasekolah · Sekolah Kebangsaan · Sekolah Agama</title>
+<title>Kelas Nadi — belajar jadi seronok</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header class="topbar">
   <div class="brand">
-    <span class="brand-icon">ن</span>
-    <span>
-      <b>Kelas Nadi</b>
-      <small>Prasekolah · Sekolah Kebangsaan · Sekolah Agama</small>
-    </span>
+    <span class="brand-icon" id="topMascot"></span>
+    <span><b>Kelas Nadi</b><small>Prasekolah · Sekolah Kebangsaan · Sekolah Agama</small></span>
   </div>
-  <button id="printTop" class="ghost" type="button">Cetak</button>
+  <div class="topbtns">
+    <button id="soundBtn" class="ghost" type="button" title="Bunyi">🔊</button>
+    <button id="printTop" class="ghost" type="button">Cetak</button>
+  </div>
 </header>
 
 <main class="wrap">
   <section class="hero">
-    <p class="eyebrow">Latihan sekolah rendah Malaysia</p>
-    <h1>Tiga aliran, satu tempat.<br><em>Latih dalam app, cetak bila perlu.</em></h1>
-    <p>Pilih aliran, tahap dan subjek. Jawab terus di telefon, atau cetak lembaran A4 untuk ditulis tangan.</p>
-    <div class="chips">
-      <span class="chip free">Percuma</span>
-      <span class="chip">Tiada iklan</span>
-      <span class="chip">Tiada akaun</span>
-      <span class="chip">Boleh guna offline</span>
+    <div class="hero-mascot" id="heroMascot"></div>
+    <div class="hero-text">
+      <h1>Jom main sambil belajar!</h1>
+      <p>Pilih aliran, jawab laju-laju, kutip bintang ⭐ — atau cetak lembaran untuk tulis tangan.</p>
+      <div class="chips">
+        <span class="chip free">Percuma</span>
+        <span class="chip">Bunyi & animasi</span>
+        <span class="chip">Tiada iklan</span>
+        <span class="chip">Boleh guna offline</span>
+      </div>
     </div>
   </section>
 
   <section class="panel">
-    <h2>Untuk siapa latihan ini?</h2>
     <div class="grid">
-      <label>Nama anak / murid
+      <label>Nama anak
         <input id="profileName" type="text" placeholder="Contoh: Aisyah" autocomplete="off">
       </label>
+      <label>Cara jawab
+        <select id="mode">
+          <option value="sheet" selected>Lembaran — semua soalan sekali pandang</option>
+          <option value="focus">Satu-satu — fokus besar</option>
+        </select>
+      </label>
     </div>
-    <p class="hint" id="profileHint">Markah disimpan dalam telefon ini sahaja. Tiada data dihantar ke mana-mana.</p>
   </section>
 
   <section class="panel">
@@ -54,56 +60,48 @@
       <label>Tahap / tahun<select id="level"></select></label>
       <label>Subjek<select id="subject"></select></label>
       <label>Topik<select id="topic"></select></label>
-      <label>Bilangan soalan
-        <select id="count">
-          <option>10</option>
-          <option selected>20</option>
-          <option>30</option>
-          <option value="Semua">Semua</option>
-        </select>
+      <label>Bilangan
+        <select id="count"><option>10</option><option selected>15</option><option>20</option><option value="Semua">Semua</option></select>
       </label>
     </div>
     <div class="actions">
-      <button id="start" class="primary" type="button">Mula latihan</button>
-      <button id="printSheet" class="outline" type="button">Cetak lembaran ini</button>
-      <button id="printTrace" class="outline" type="button">Cetak lembaran surih</button>
+      <button id="start" class="primary" type="button">▶ Mula main</button>
+      <button id="printSheet" class="outline" type="button">Cetak lembaran</button>
+      <button id="printTrace" class="outline" type="button">Cetak surih</button>
     </div>
   </section>
 
-  <section class="progress-row">
-    <div><span id="gradeLabel">—</span><span id="scoreLabel">Belum mula</span></div>
-    <div class="progress"><i id="progressBar"></i></div>
+  <section id="hud" class="hud" hidden>
+    <div class="hud-item"><span id="hudStars" class="stars">☆☆☆</span><small>Bintang</small></div>
+    <div class="hud-item"><b id="hudStreak">0</b><small>Streak 🔥</small></div>
+    <div class="hud-item"><b id="hudRight">0</b><small>Betul</small></div>
+    <div class="hud-item"><b id="hudLeft">0</b><small>Tinggal</small></div>
+    <div class="hud-bar"><i id="hudFill"></i></div>
   </section>
 
-  <section id="quiz" class="panel">
-    <div class="quiz-head">
-      <span id="questionNumber">Soalan</span>
-      <span id="topicBadge" class="badge">—</span>
-    </div>
-    <h2 id="prompt">Tekan “Mula latihan” untuk mula.</h2>
-    <div id="questionBody"></div>
-    <div id="feedback" aria-live="polite"></div>
+  <section id="quizArea"></section>
+
+  <section id="result" class="panel result" hidden>
+    <div class="result-mascot" id="resultMascot"></div>
+    <h2 id="resultTitle">Siap!</h2>
+    <p id="resultStars" class="big-stars">☆☆☆</p>
+    <p id="resultText"></p>
     <div class="actions">
-      <button id="check" class="primary" type="button" disabled>Semak jawapan</button>
-      <button id="next" class="outline" type="button" hidden>Soalan seterusnya</button>
+      <button id="againBtn" class="primary" type="button">Main lagi</button>
+      <button id="fixBtn" class="accent" type="button" hidden>Betulkan yang salah</button>
+      <button id="printResult" class="outline" type="button">Cetak lembaran ini</button>
     </div>
-  </section>
-
-  <section class="panel">
-    <h2>Progres anak</h2>
-    <div id="progressList" class="hint">Belum ada markah disimpan.</div>
   </section>
 
   <section class="panel note">
-    <b>Nota kandungan:</b> Kelas Nadi ialah bahan latihan sokongan keluarga. Soalan disusun ikut standard umum
-    KSPK (Prasekolah), KSSR (Sekolah Kebangsaan) dan bidang KSRA/KAFA (Sekolah Agama), tetapi
-    <b>belum disahkan item demi item oleh guru</b>. Ia bukan bahan rasmi KPM. Ejaan Jawi bagi perkataan asas;
-    guru boleh guna variasi buku teks.
+    <b>Nota:</b> Kelas Nadi bahan latihan sokongan keluarga — disusun ikut standard umum KSPK / KSSR / KSRA,
+    <b>belum disemak guru</b>, bukan bahan rasmi KPM.
   </section>
 </main>
 
 <footer>Kelas Nadi · latihan kendiri untuk murid sekolah rendah</footer>
 <div id="print-root"></div>
+<div id="confetti"></div>
 <script src="app.js"></script>
 </body>
 </html>

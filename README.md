@@ -6,15 +6,23 @@ Live: https://techkitamy.github.io/kelasnadi/
 
 ## Fungsi
 
-- Pilih aliran → tahap/tahun → subjek → topik → bilangan soalan (10 / 20 / 30 / Semua)
+- Pilih aliran → tahap/tahun → subjek → topik → bilangan soalan (10 / 15 / 20 / Semua)
+- **Dua cara jawab:**
+  - **Lembaran** — semua soalan sekali pandang (skrol), jawab terus, tanda serta-merta
+  - **Satu-satu** — fokus satu soalan besar (sesuai untuk murid kecil)
 - Tiga jenis soalan:
   - **aneka pilihan** (termasuk soalan Jawi berarah kanan-ke-kiri)
   - **taip jawapan** (Rumi / angka)
   - **dijana automatik** — soalan matematik (tambah / tolak) tanpa had, supaya murid boleh berlatih berulang
-- Markah + bar kemajuan, disimpan ikut profil anak (nama) dalam telefon
-- **Cetak lembaran latihan + skema jawapan** (A4), dan **lembaran surih** (A–Z, a–z, 1–10, huruf Jawi)
+- **Gamifikasi:** bintang (★☆☆), streak 🔥, HUD kemajuan, animasi + confetti, bunyi betul/salah (boleh mute)
+- Butang **"Betulkan yang salah"** — ulang semula soalan yang tersilap
+- Markah + kemajuan disimpan ikut profil anak (nama) dalam telefon
+- **Cetak lembaran latihan + skema jawapan** (A4)
+- **Lembaran surih sebenar:** garis tiga (atas / tengah putus-putus / bawah) — 1 huruf contoh + 6 huruf titik untuk disurih + 1 petak tulis sendiri; set A–Z, a–z, 0–9, dan huruf Jawi/hijaiyah
 - PWA: boleh dipasang pada telefon, guna offline selepas muat turun pertama
 - Tiada akaun, tiada iklan, tiada penjejakan. Semua data kekal dalam peranti pengguna.
+
+> Service worker guna strategi **network-first** supaya kemas kini terus nampak (versi awal guna cache-first — pengguna tersekat pada versi lama).
 
 ## Struktur fail
 
