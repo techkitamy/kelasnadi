@@ -6,7 +6,7 @@
      menyebabkan app gagal dibuka offline).
    Jangan tukar senarai ASSETS tanpa mengemas kini tests/test_assets.py
 */
-const CACHE = 'kelasnadi-v5';
+const CACHE = 'kelasnadi-v6';
 const ASSETS = [
   './', './index.html', './style.css', './core.js', './app.js', './content.json', './manifest.json',
   './version.json',

@@ -24,7 +24,7 @@ const S = {
 };
 const PROGRESS_STORE = 'kelasnadi.progress.v3';
 /* Versi app. WAJIB padan dengan version.json — naikkan dua-dua setiap kali deploy. */
-const APP_VERSION = '3.0.0';
+const APP_VERSION = '3.0.1';
 const $ = (id) => document.getElementById(id);
 
 /* ------------------------------------------------------------------ util */

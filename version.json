@@ -1,4 +1,4 @@
 {
-  "version": "3.0.0",
+  "version": "3.0.1",
   "note": "Naikkan versi ini SETIAP kali deploy supaya app boleh beritahu pengguna ada versi baru. Padan dengan APP_VERSION dalam app.js."
 }

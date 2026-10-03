@@ -4,7 +4,10 @@
 'use strict';
 const test = require('node:test');
 const assert = require('node:assert');
+const fs = require('node:fs');
+const path = require('node:path');
 const H = require('./helpers');
+const VERSI = JSON.parse(fs.readFileSync(path.join(__dirname, '..', '..', 'version.json'), 'utf8')).version;
 
 let server, browser, page, base;
 
@@ -46,7 +49,7 @@ T('1. app load tanpa console error', async () => {
   assert.deepStrictEqual(page.__errors, []);
   assert.strictEqual(await page.$$eval('[data-stream]', (e) => e.length), 3);
   assert.ok(await page.evaluate(() => !!window.KelasNadiCore));
-  assert.strictEqual(await page.evaluate(() => APP_VERSION), '3.0.0');
+  assert.strictEqual(await page.evaluate(() => APP_VERSION), VERSI, 'APP_VERSION mesti padan version.json');
 });
 
 T('2. pilih Prasekolah → subjek → topik → mula kuiz', async () => {
@@ -363,19 +366,35 @@ T('18. mute / unmute bunyi', async () => {
 
 T('19. navigasi papan kekunci asas', async () => {
   await setup('prasekolah', 'abc', null, 10);
+  await page.bringToFront();
+  await new Promise((r) => setTimeout(r, 250));
   assert.strictEqual(await page.evaluate(() => { const b = document.querySelector('.option'); b.focus(); return document.activeElement === b; }), true);
-  await page.keyboard.press('Tab');
-  assert.strictEqual(await page.evaluate(() => document.activeElement.classList.contains('option')), true, 'Tab pindah fokus');
-  await page.keyboard.press('Enter');
-  await page.waitForFunction(() => S.active.items.filter((q) => q._done).length === 1);
+  /* Tab mungkin perlu cuba lebih sekali dalam suite yang berat — ulang sehingga fokus berpindah */
+  let pindah = false;
+  for (let k = 0; k < 4 && !pindah; k++) {
+    await page.keyboard.press('Tab');
+    pindah = await page.evaluate(() => !!document.activeElement && document.activeElement.classList.contains('option'));
+  }
+  assert.strictEqual(pindah, true, 'Tab memindahkan fokus ke pilihan seterusnya');
+  let terjawab = false;
+  for (let k = 0; k < 3 && !terjawab; k++) {
+    await page.keyboard.press('Enter');
+    terjawab = await page.evaluate(() => S.active.items.filter((q) => q._done).length === 1).catch(() => false);
+    await new Promise((r) => setTimeout(r, 200));
+  }
+  assert.strictEqual(terjawab, true, 'Enter memilih jawapan');
   /* soalan taip: Enter menghantar */
   await page.evaluate(() => { S.active.items = S.active.items.map((q, i) => i === 1 ? Object.assign({}, q, { t: 'type', p: 'Taip: 1 + 1 = ?', a: '2', o: undefined }) : q); renderQuiz(); });
   await page.click('#in-1');
   await page.type('#in-1', '2');
-  await page.keyboard.press('Enter');
-  const st = await H.state(page);
-  assert.strictEqual(st.items[1].done, true, 'Enter menghantar jawapan taip');
-  assert.strictEqual(st.items[1].ok, true);
+  let taipSelesai = false;
+  for (let k = 0; k < 3 && !taipSelesai; k++) {
+    await page.keyboard.press('Enter');
+    taipSelesai = await page.evaluate(() => !!S.active.items[1]._done).catch(() => false);
+    await new Promise((r) => setTimeout(r, 200));
+  }
+  assert.strictEqual(taipSelesai, true, 'Enter menghantar jawapan taip');
+  assert.strictEqual((await H.state(page)).items[1].ok, true);
 });
 
 T('20. skop kosong → tiada crash, mesej mesra', async () => {

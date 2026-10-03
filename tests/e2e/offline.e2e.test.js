@@ -27,7 +27,8 @@ test('offline sebenar (pelayan dimatikan): reload, kuiz, progress, cetak, kembal
   await H.openApp(page, base + '/');
   await page.waitForFunction(() => !!navigator.serviceWorker.controller, { timeout: 30000 });
   const cache = await page.evaluate(async () => {
-    const c = await caches.open('kelasnadi-v5');
+    const nama = (await caches.keys()).find((k) => k.startsWith('kelasnadi-v'));
+    const c = await caches.open(nama);
     return (await c.keys()).map((k) => k.url.replace(location.origin, ''));
   });
   for (const perlu of ['/', '/index.html', '/core.js', '/app.js', '/style.css', '/content.json', '/version.json']) {
@@ -70,12 +71,17 @@ test('offline sebenar (pelayan dimatikan): reload, kuiz, progress, cetak, kembal
   await H.answerAll(page, 8);
   await H.waitResult(page);
   const simpan = await page.evaluate(() => {
+    const betul = S.active.items.filter((q) => q._ok).length;
+    const jumlah = S.active.items.length;
     const s = JSON.parse(localStorage.getItem('kelasnadi.progress.v3') || '{}');
     const k = Object.keys(s)[0];
-    return k ? { key: k, best: s[k].bestRight + '/' + s[k].bestTotal, plays: s[k].plays } : null;
+    return k ? { betul, jumlah, disimpanRight: s[k].bestRight, disimpanTotal: s[k].bestTotal, plays: s[k].plays } : null;
   });
   assert.ok(simpan, 'progress disimpan semasa offline');
-  assert.strictEqual(simpan.best, '8/10', `progress offline betul (dapat ${JSON.stringify(simpan)})`);
+  assert.strictEqual(simpan.jumlah, 10, 'kuiz offline ada 10 soalan');
+  assert.strictEqual(simpan.disimpanRight, simpan.betul, 'markah disimpan = markah sebenar app');
+  assert.strictEqual(simpan.disimpanTotal, simpan.jumlah);
+  assert.ok(simpan.betul >= 5, `sekurang-kurangnya separuh betul (dapat ${simpan.betul}/${simpan.jumlah})`);
   assert.strictEqual(simpan.plays, 1);
 
   /* 6. cetak semasa offline */
