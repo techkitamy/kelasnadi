@@ -4,25 +4,37 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#ffcf4d">
+<meta name="description" content="Latihan percuma Prasekolah, Sekolah Kebangsaan dan Sekolah Agama — main dalam app, cetak lembaran A4.">
 <link rel="manifest" href="manifest.json">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="icon-192.png" sizes="192x192" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon-180.png">
 <title>Kelas Nadi — belajar jadi seronok</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<a class="skip" href="#pilihLatihan">Langkau ke pilihan latihan</a>
+
 <header class="topbar">
   <div class="brand">
-    <span class="brand-icon" id="topMascot"></span>
+    <span class="brand-icon" id="topMascot" aria-hidden="true"></span>
     <span><b>Kelas Nadi</b><small>Prasekolah · Sekolah Kebangsaan · Sekolah Agama</small></span>
   </div>
   <div class="topbtns">
-    <button id="soundBtn" class="ghost" type="button" title="Bunyi">🔊</button>
+    <button id="installBtn" class="ghost" type="button" hidden>⬇ Pasang Kelas Nadi</button>
+    <button id="soundBtn" class="ghost" type="button" aria-pressed="true" aria-label="Bunyi">🔊</button>
     <button id="printTop" class="ghost" type="button">Cetak</button>
   </div>
 </header>
 
+<div id="updateBar" class="barbar" hidden role="status" aria-live="polite">
+  <span>Versi baru Kelas Nadi tersedia.</span>
+  <button id="updateReload" class="primary" type="button">Muat semula</button>
+</div>
+
 <main class="wrap">
   <section class="hero">
-    <div class="hero-mascot" id="heroMascot"></div>
+    <div class="hero-mascot" id="heroMascot" aria-hidden="true"></div>
     <div class="hero-text">
       <h1>Jom main sambil belajar!</h1>
       <p>Pilih aliran, jawab laju-laju, kutip bintang ⭐ — atau cetak lembaran untuk tulis tangan.</p>
@@ -37,10 +49,10 @@
 
   <section class="panel">
     <div class="grid">
-      <label>Nama anak
-        <input id="profileName" type="text" placeholder="Contoh: Aisyah" autocomplete="off">
+      <label for="profileName">Nama anak
+        <input id="profileName" type="text" placeholder="Contoh: Aisyah" autocomplete="off" maxlength="30">
       </label>
-      <label>Cara jawab
+      <label for="mode">Cara jawab
         <select id="mode">
           <option value="sheet" selected>Lembaran — semua soalan sekali pandang</option>
           <option value="focus">Satu-satu — fokus besar</option>
@@ -54,13 +66,13 @@
     <div class="stream-pick" id="streamPick"></div>
   </section>
 
-  <section class="panel">
+  <section class="panel" id="pilihLatihan">
     <h2>Pilih latihan</h2>
     <div class="grid">
-      <label>Tahap / tahun<select id="level"></select></label>
-      <label>Subjek<select id="subject"></select></label>
-      <label>Topik<select id="topic"></select></label>
-      <label>Bilangan
+      <label for="level">Tahap / tahun<select id="level"></select></label>
+      <label for="subject">Subjek<select id="subject"></select></label>
+      <label for="topic">Topik<select id="topic"></select></label>
+      <label for="count">Bilangan
         <select id="count"><option>10</option><option selected>15</option><option>20</option><option value="Semua">Semua</option></select>
       </label>
     </div>
@@ -71,18 +83,26 @@
     </div>
   </section>
 
-  <section id="hud" class="hud" hidden>
+  <section id="scopeBar" class="scopebar" hidden role="status" aria-live="polite">
+    <p id="scopeText"></p>
+    <div class="actions">
+      <button id="scopeNew" class="primary" type="button">Mula kuiz baru</button>
+      <button id="scopeKeep" class="outline" type="button">Kekal kuiz lama</button>
+    </div>
+  </section>
+
+  <section id="hud" class="hud" hidden aria-live="polite">
     <div class="hud-item"><span id="hudStars" class="stars">☆☆☆</span><small>Bintang</small></div>
     <div class="hud-item"><b id="hudStreak">0</b><small>Streak 🔥</small></div>
     <div class="hud-item"><b id="hudRight">0</b><small>Betul</small></div>
     <div class="hud-item"><b id="hudLeft">0</b><small>Tinggal</small></div>
-    <div class="hud-bar"><i id="hudFill"></i></div>
+    <div class="hud-bar"><i id="hudFill"></i><span id="hudProgressText" class="hud-note">0/0 dijawab</span></div>
   </section>
 
   <section id="quizArea"></section>
 
-  <section id="result" class="panel result" hidden>
-    <div class="result-mascot" id="resultMascot"></div>
+  <section id="result" class="panel result" hidden role="status" aria-live="polite">
+    <div class="result-mascot" id="resultMascot" aria-hidden="true"></div>
     <h2 id="resultTitle">Siap!</h2>
     <p id="resultStars" class="big-stars">☆☆☆</p>
     <p id="resultText"></p>
@@ -90,6 +110,19 @@
       <button id="againBtn" class="primary" type="button">Main lagi</button>
       <button id="fixBtn" class="accent" type="button" hidden>Betulkan yang salah</button>
       <button id="printResult" class="outline" type="button">Cetak lembaran ini</button>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2 id="progressTitle">Kemajuan anak</h2>
+    <div id="progressList" class="hint">Belum ada rekod.</div>
+    <div class="actions">
+      <button id="progressClear" class="outline" type="button" hidden>Padam kemajuan</button>
+      <span id="progressConfirmBar" class="confirmbar" hidden>
+        <span>Pasti nak padam semua rekod kemajuan anak ini?</span>
+        <button id="progressConfirm" class="accent" type="button">Ya, padam</button>
+        <button id="progressCancel" class="ghost-dark" type="button">Batal</button>
+      </span>
     </div>
   </section>
 
@@ -101,7 +134,8 @@
 
 <footer>Kelas Nadi · latihan kendiri untuk murid sekolah rendah</footer>
 <div id="print-root"></div>
-<div id="confetti"></div>
+<div id="confetti" aria-hidden="true"></div>
+<script src="core.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

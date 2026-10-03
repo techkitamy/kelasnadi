@@ -105,7 +105,49 @@ select:focus, input:focus { outline: 3px solid #ffedb3; border-color: var(--sun)
 .stars { color: #f5a623; font-size: 19px; letter-spacing: 2px; }
 .hud-bar { flex: 1 1 140px; height: 12px; background: #fff; border-radius: 999px; overflow: hidden; border: 2px solid #ffe6a3; }
 .hud-bar i { display: block; height: 100%; width: 0; background: linear-gradient(90deg, var(--leaf), var(--sky)); transition: width .35s; }
+.hud-bar { position: relative; }
+.hud-note { position: absolute; right: 6px; top: 14px; font-size: 10.5px; color: var(--muted); font-weight: 800; }
 .pop { animation: pop .35s; }
+
+/* ---------- bar pilihan berubah / kemas kini PWA ---------- */
+.scopebar, .barbar {
+  display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between;
+  background: #fff6e0; border: 2px solid #ffd98a; border-radius: var(--radius);
+  padding: 12px 14px; margin: 14px 0; font-size: 14px; font-weight: 700;
+}
+.scopebar p { margin: 0; flex: 1 1 260px; }
+.barbar { background: #e9f6ff; border-color: #a9dcf3; position: sticky; top: 0; z-index: 8; }
+
+/* ---------- panel kemajuan ---------- */
+.plist { display: grid; gap: 8px; margin-top: 8px; }
+.prow {
+  display: flex; flex-wrap: wrap; gap: 8px; justify-content: space-between; align-items: center;
+  background: #f8fcfd; border: 2px solid var(--line); border-radius: 14px; padding: 10px 12px;
+}
+.prow-main b { display: block; font-size: 14px; }
+.prow-scores { display: flex; gap: 6px; flex-wrap: wrap; }
+.pill {
+  background: #fff; border: 2px solid var(--line); border-radius: 999px;
+  padding: 4px 10px; font-size: 12px; font-weight: 800;
+}
+.pill.best { background: #fffbe9; border-color: #ffe08a; color: #8a6100; }
+.confirmbar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; font-size: 13.5px; font-weight: 700; color: var(--bad); }
+button.ghost-dark { background: #eef3f5; color: var(--ink); }
+
+/* ---------- mod fokus ---------- */
+.focus-nav { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin: 10px 0 26px; }
+
+/* ---------- aksesibiliti ---------- */
+.skip {
+  position: absolute; left: -9999px; top: 0; background: #fff; color: var(--ink);
+  padding: 10px 14px; border-radius: 0 0 12px 0; font-weight: 800; z-index: 99;
+}
+.skip:focus { left: 0; }
+button:focus-visible, select:focus-visible, input:focus-visible, a:focus-visible {
+  outline: 3px solid #1c7f97; outline-offset: 2px;
+}
+.option:focus-visible { outline: 3px solid #8b7bd8; outline-offset: 2px; }
+#quizArea .qcard:focus-within { border-color: var(--sky); }
 
 /* ---------- question cards (lembaran) ---------- */
 .qcard {
@@ -159,7 +201,7 @@ select:focus, input:focus { outline: 3px solid #ffedb3; border-color: var(--sun)
 #print-root { display: none; }
 @media print {
   body { background: #fff; }
-  .topbar, main, footer, #confetti { display: none !important; }
+  .topbar, main, footer, #confetti, #updateBar, .scopebar, .barbar { display: none !important; }
   #print-root { display: block !important; }
   @page { size: A4; margin: 12mm; }
   .sheet { page-break-after: always; }
@@ -191,4 +233,6 @@ select:focus, input:focus { outline: 3px solid #ffedb3; border-color: var(--sun)
 }
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; }
+  #confetti { display: none !important; }
+  .confetti-piece { display: none !important; }
 }
