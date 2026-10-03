@@ -38,10 +38,28 @@ manifest.json, sw.js     PWA + offline
 ## Ujian
 
 ```sh
-python3 -m unittest discover -s tests -v     # 34 ujian
+python3 -m unittest discover -s tests -v     # 34 ujian (kandungan, aset, PWA, privasi)
 node --check core.js && node --check app.js && node --check sw.js
 node --test tests/core.test.js               # 12 ujian regresi logik
+
+# E2E dalam Chromium sebenar (perlu sekali sahaja: npm install)
+npm install
+npm run test:e2e                             # 30 ujian E2E
 ```
+
+E2E (`tests/e2e/`) membuka app dalam Chromium, klik DOM sebenar dan menguji:
+aliran kuiz penuh, snapshot skop, cetakan (termasuk printToPDF), progress, kemas kini
+service worker (`v3.0.0 → v3.0.1`), offline sebenar (pelayan dimatikan) dan 5 viewport
+(360×800, 390×844, 412×915, tablet portrait, desktop).
+
+`puppeteer-core` ialah **devDependency sahaja** — ia tidak digunakan oleh app (app kekal
+HTML/CSS/JS statik tanpa dependency runtime). Chromium: `findChrome()` guna
+`PUPPETEER_EXECUTABLE_PATH` / `CHROME_PATH` kalau diset, jika tidak cari dalam cache Playwright.
+
+## Ujian peranti sebenar (manual — belum dijalankan)
+
+- `docs/qa-android.md` — checklist Android/Chrome (PWA, ikon, standalone, bunyi, offline, cetak, Jawi, putaran)
+- `docs/qa-ios-safari.md` — checklist iPhone/Safari (Tambah ke Skrin Utama, audio iOS, offline, Jawi)
 
 ## Tambah / ubah soalan
 

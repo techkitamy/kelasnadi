@@ -2,11 +2,12 @@ name: CI
 
 on:
   push:
-    branches: [main, stabilize-mvp]
+    branches: [main, stabilize-mvp, 'qa/**']
   pull_request:
 
 jobs:
-  test:
+  ujian:
+    name: Ujian unit, aset & logik
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -30,3 +31,25 @@ jobs:
 
       - name: Ujian regresi logik (Node)
         run: node --test tests/core.test.js
+
+  e2e:
+    name: E2E browser (Chromium)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Pasang Chromium (untuk ujian E2E)
+        uses: browser-actions/setup-chrome@v1
+        id: chrome
+
+      - name: Pasang devDependencies
+        run: npm install --no-audit --no-fund
+
+      - name: E2E — chromium sebenar
+        env:
+          PUPPETEER_EXECUTABLE_PATH: ${{ steps.chrome.outputs.chrome-path }}
+        run: npm run test:e2e
