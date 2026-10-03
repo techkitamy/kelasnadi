@@ -638,24 +638,26 @@ function printTracing() {
 function setupPwa() {
   if (!('serviceWorker' in navigator)) return;
   let pendingWorker = null;
-  /* Kalau halaman ini dimuat TANPA SW mengawal (pemasangan pertama / selepas unregister),
-     jangan tunjuk bar "versi baru" — itu bukan kemas kini, itu pemasangan. */
-  const hadController = !!navigator.serviceWorker.controller;
+  let wantReload = false;   /* hanya benar bila user menekan "Muat semula" */
 
   navigator.serviceWorker.register('./sw.js').then((reg) => {
     reg.addEventListener('updatefound', () => {
       const nw = reg.installing;
       if (!nw) return;
       nw.addEventListener('statechange', () => {
-        if (nw.state === 'installed') pendingWorker = nw;   /* simpan sahaja; bar ikut version.json */
+        /* Simpan HANYA kalau ada pengawal lama — kalau ini pemasangan pertama,
+           pekerja ini akan jadi pengawal, bukan "versi menunggu". */
+        if (nw.state === 'installed' && navigator.serviceWorker.controller) pendingWorker = nw;
       });
     });
   }).catch(() => { /* offline/PWA tak disokong — app tetap jalan */ });
 
   /* Sumber kebenaran tunggal: version.json di pelayan vs APP_VERSION dalam app.
-     Cara ini deterministik — tiada perlumbaan masa service worker. */
+     Cara ini deterministik — tiada perlumbaan masa service worker.
+     Semak SEMASA panggil (bukan snapshot semasa muat) supaya lawatan pertama pun
+     dapat mesej kemas kini bila user kembali ke tab. */
   const checkVersion = async () => {
-    if (!hadController || !navigator.onLine) return;
+    if (!navigator.serviceWorker.controller || !navigator.onLine) return;
     try {
       const res = await fetch('./version.json', { cache: 'no-store' });
       const v = await res.json();
@@ -667,12 +669,23 @@ function setupPwa() {
 
   let reloaded = false;
   navigator.serviceWorker.addEventListener('controllerchange', () => {
-    if (reloaded) return; reloaded = true; location.reload();
+    /* JANGAN reload bila SW mula mengawal (pemasangan pertama) — itu reload tak perlu
+       dan boleh nampak seperti reload loop. Reload hanya bila user sendiri
+       menekan "Muat semula" untuk kemas kini. */
+    if (reloaded || !wantReload) return;
+    reloaded = true; location.reload();
   });
 
   $('updateReload').addEventListener('click', () => {
-    if (pendingWorker) { pendingWorker.postMessage({ type: 'SKIP_WAITING' }); pendingWorker = null; }
-    else location.reload();
+    wantReload = true;
+    /* Beritahu pekerja menunggu supaya aktif (kalau ada), tetapi JANGAN bergantung
+       pada controllerchange — kalau tidak, butang boleh nampak "mati" bila
+       pekerja itu sudah aktif. Muat semula sentiasa berlaku. */
+    try {
+      if (pendingWorker && pendingWorker.state !== 'activated') pendingWorker.postMessage({ type: 'SKIP_WAITING' });
+    } catch (e) { /* diabaikan */ }
+    pendingWorker = null;
+    setTimeout(() => location.reload(), 150);
   });
 
   window.addEventListener('beforeinstallprompt', (e) => {

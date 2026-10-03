@@ -67,8 +67,22 @@ self.addEventListener('fetch', (e) => {
           const copy = res.clone();
           const c = await caches.open(CACHE);
           c.put(req, copy);
+          return res;
         }
-        return res;
+        /* 304 / respons tak ok: jangan hantar respons tak boleh guna kepada halaman.
+           Cuba cache kita, kalau tiada, paksa ambilan penuh. */
+        const hit = await caches.match(req, { ignoreSearch: req.mode === 'navigate' });
+        if (hit) return hit;
+        try {
+          const fresh = await fetch(req, { cache: 'reload' });
+          if (fresh && fresh.ok) {
+            const c2 = await caches.open(CACHE);
+            c2.put(req, fresh.clone());
+          }
+          return fresh;
+        } catch (err) {
+          return res;
+        }
       })
       .catch(fallback)
   );
