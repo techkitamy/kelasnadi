@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ms">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#145b50">
+<link rel="manifest" href="manifest.json">
+<title>Kelas Nadi — Prasekolah · Sekolah Kebangsaan · Sekolah Agama</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-icon">ن</span>
+    <span>
+      <b>Kelas Nadi</b>
+      <small>Prasekolah · Sekolah Kebangsaan · Sekolah Agama</small>
+    </span>
+  </div>
+  <button id="printTop" class="ghost" type="button">Cetak</button>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <p class="eyebrow">Latihan sekolah rendah Malaysia</p>
+    <h1>Tiga aliran, satu tempat.<br><em>Latih dalam app, cetak bila perlu.</em></h1>
+    <p>Pilih aliran, tahap dan subjek. Jawab terus di telefon, atau cetak lembaran A4 untuk ditulis tangan.</p>
+    <div class="chips">
+      <span class="chip free">Percuma</span>
+      <span class="chip">Tiada iklan</span>
+      <span class="chip">Tiada akaun</span>
+      <span class="chip">Boleh guna offline</span>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>Untuk siapa latihan ini?</h2>
+    <div class="grid">
+      <label>Nama anak / murid
+        <input id="profileName" type="text" placeholder="Contoh: Aisyah" autocomplete="off">
+      </label>
+    </div>
+    <p class="hint" id="profileHint">Markah disimpan dalam telefon ini sahaja. Tiada data dihantar ke mana-mana.</p>
+  </section>
+
+  <section class="panel">
+    <h2>Pilih aliran</h2>
+    <div class="stream-pick" id="streamPick"></div>
+  </section>
+
+  <section class="panel">
+    <h2>Pilih latihan</h2>
+    <div class="grid">
+      <label>Tahap / tahun<select id="level"></select></label>
+      <label>Subjek<select id="subject"></select></label>
+      <label>Topik<select id="topic"></select></label>
+      <label>Bilangan soalan
+        <select id="count">
+          <option>10</option>
+          <option selected>20</option>
+          <option>30</option>
+          <option value="Semua">Semua</option>
+        </select>
+      </label>
+    </div>
+    <div class="actions">
+      <button id="start" class="primary" type="button">Mula latihan</button>
+      <button id="printSheet" class="outline" type="button">Cetak lembaran ini</button>
+      <button id="printTrace" class="outline" type="button">Cetak lembaran surih</button>
+    </div>
+  </section>
+
+  <section class="progress-row">
+    <div><span id="gradeLabel">—</span><span id="scoreLabel">Belum mula</span></div>
+    <div class="progress"><i id="progressBar"></i></div>
+  </section>
+
+  <section id="quiz" class="panel">
+    <div class="quiz-head">
+      <span id="questionNumber">Soalan</span>
+      <span id="topicBadge" class="badge">—</span>
+    </div>
+    <h2 id="prompt">Tekan “Mula latihan” untuk mula.</h2>
+    <div id="questionBody"></div>
+    <div id="feedback" aria-live="polite"></div>
+    <div class="actions">
+      <button id="check" class="primary" type="button" disabled>Semak jawapan</button>
+      <button id="next" class="outline" type="button" hidden>Soalan seterusnya</button>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>Progres anak</h2>
+    <div id="progressList" class="hint">Belum ada markah disimpan.</div>
+  </section>
+
+  <section class="panel note">
+    <b>Nota kandungan:</b> Kelas Nadi ialah bahan latihan sokongan keluarga. Soalan disusun ikut standard umum
+    KSPK (Prasekolah), KSSR (Sekolah Kebangsaan) dan bidang KSRA/KAFA (Sekolah Agama), tetapi
+    <b>belum disahkan item demi item oleh guru</b>. Ia bukan bahan rasmi KPM. Ejaan Jawi bagi perkataan asas;
+    guru boleh guna variasi buku teks.
+  </section>
+</main>
+
+<footer>Kelas Nadi · latihan kendiri untuk murid sekolah rendah</footer>
+<div id="print-root"></div>
+<script src="app.js"></script>
+</body>
+</html>

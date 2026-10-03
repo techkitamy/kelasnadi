@@ -1,0 +1,2816 @@
+{
+ "version": "1.0",
+ "note": "Bank perintis Kelas Nadi. Soalan disusun ikut standard umum KSPK (Prasekolah), KSSR (Sekolah Kebangsaan) dan bidang KSRA/KAFA (Sekolah Agama) — tetapi BELUM disahkan item demi item oleh guru. Gunakan sebagai latihan sokongan keluarga, bukan sebagai bahan rasmi KPM. Ejaan Jawi bagi perkataan asas; guru boleh guna variasi buku teks.",
+ "streams": [
+  {
+   "id": "prasekolah",
+   "name": "Prasekolah",
+   "tagline": "Umur 5–6 tahun · KSPK",
+   "levels": [
+    {
+     "id": "pra",
+     "name": "Prasekolah (5–6 tahun)",
+     "subjects": [
+      {
+       "id": "abc",
+       "name": "Huruf ABC",
+       "topics": [
+        {
+         "id": "abc-huruf-besar",
+         "name": "Kenal huruf besar",
+         "questions": [
+          {
+           "t": "mcq",
+           "p": "Huruf besar bagi 'a' ialah?",
+           "o": [
+            "A",
+            "B",
+            "D",
+            "E"
+           ],
+           "a": "A"
+          },
+          {
+           "t": "mcq",
+           "p": "Huruf besar bagi 'b' ialah?",
+           "o": [
+            "B",
+            "D",
+            "P",
+            "Q"
+           ],
+           "a": "B"
+          },
+          {
+           "t": "mcq",
+           "p": "Huruf kecil bagi 'B' ialah?",
+           "o": [
+            "b",
+            "d",
+            "p",
+            "q"
+           ],
+           "a": "b"
+          },
+          {
+           "t": "mcq",
+           "p": "Susunan: A, B, ?, D. Apa huruf kosong?",
+           "o": [
+            "C",
+            "E",
+            "F",
+            "G"
+           ],
+           "a": "C"
+          },
+          {
+           "t": "mcq",
+           "p": "Yang mana huruf vokal?",
+           "o": [
+            "a",
+            "m",
+            "k",
+            "t"
+           ],
+           "a": "a"
+          },
+          {
+           "t": "mcq",
+           "p": "Huruf pertama dalam perkataan 'bola'?",
+           "o": [
+            "b",
+            "l",
+            "a",
+            "o"
+           ],
+           "a": "b"
+          },
+          {
+           "t": "mcq",
+           "p": "Huruf pertama dalam perkataan 'epal'?",
+           "o": [
+            "e",
+            "p",
+            "l",
+            "a"
+           ],
+           "a": "e"
+          },
+          {
+           "t": "mcq",
+           "p": "'M' ialah huruf pertama bagi perkataan?",
+           "o": [
+            "Mata",
+            "Buku",
+            "Kaki",
+            "Susu"
+           ],
+           "a": "Mata"
+          },
+          {
+           "t": "type",
+           "p": "Taip huruf besar yang datang selepas 'C'.",
+           "a": "d",
+           "accept": [
+            "d",
+            "D"
+           ]
+          },
+          {
+           "t": "type",
+           "p": "Taip huruf pertama dalam perkataan 'nasi'.",
+           "a": "n",
+           "accept": [
+            "n",
+            "N"
+           ]
+          }
+         ]
+        },
+        {
+         "id": "abc-huruf-kecil",
+         "name": "Huruf kecil & bunyi",
+         "questions": [
+          {
+           "t": "mcq",
+           "p": "Huruf kecil bagi 'F' ialah?",
+           "o": [
+            "f",
+            "t",
+            "l",
+            "e"
+           ],
+           "a": "f"
+          },
+          {
+           "t": "mcq",
+           "p": "Bunyi huruf 'S' ialah?",
+           "o": [
+            "sss",
+            "mmm",
+            "bbb",
+            "kkk"
+           ],
+           "a": "sss"
+          },
+          {
+           "t": "mcq",
+           "p": "Huruf pertama 'rumah' ialah?",
+           "o": [
+            "r",
+            "u",
+            "m",
+            "h"
+           ],
+           "a": "r"
+          },
+          {
+           "t": "mcq",
+           "p": "Antara ini yang mana huruf kecil?",
+           "o": [
+            "g",
+            "G",
+            "Q",
+            "R"
+           ],
+           "a": "g"
+          },
+          {
+           "t": "mcq",
+           "p": "Jumlah huruf dalam abjad ABC ialah?",
+           "o": [
+            "26",
+            "24",
+            "28",
+            "30"
+           ],
+           "a": "26"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "nombor",
+       "name": "Nombor 1–10",
+       "topics": [
+        {
+         "id": "nombor-kira-objek",
+         "name": "Kira objek",
+         "questions": [
+          {
+           "t": "mcq",
+           "p": "Kira epal: 🍎🍎🍎 — berapa?",
+           "o": [
+            "3",
+            "2",
+            "4",
+            "5"
+           ],
+           "a": "3"
+          },
+          {
+           "t": "mcq",
+           "p": "Kira bintang: ⭐⭐ — berapa?",
+           "o": [
+            "2",
+            "3",
+            "1",
+            "4"
+           ],
+           "a": "2"
+          },
+          {
+           "t": "mcq",
+           "p": "Kira bunga: 🌸🌸🌸🌸 — berapa?",
+           "o": [
+            "4",
+            "3",
+            "5",
+            "6"
+           ],
+           "a": "4"
+          },
+          {
+           "t": "mcq",
+           "p": "Kira jari: ✋✋ — berapa?",
+           "o": [
+            "10",
+            "8",
+            "12",
+            "5"
+           ],
+           "a": "10"
+          },
+          {
+           "t": "mcq",
+           "p": "Kira ikan: 🐟🐟🐟🐟🐟 — berapa?",
+           "o": [
+            "5",
+            "4",
+            "6",
+            "7"
+           ],
+           "a": "5"
+          }
+         ]
+        },
+        {
+         "id": "nombor-urutan-nombor",
+         "name": "Urutan & nilai nombor",
+         "questions": [
+          {
+           "t": "mcq",
+           "p": "Nombor selepas 5 ialah?",
+           "o": [
+            "6",
+            "4",
+            "7",
+            "8"
+           ],
+           "a": "6"
+          },
+          {
+           "t": "mcq",
+           "p": "Nombor sebelum 3 ialah?",
+           "o": [
+            "2",
+            "4",
+            "5",
+            "1"
+           ],
+           "a": "2"
+          },
+          {
+           "t": "mcq",
+           "p": "Nombor terbesar ialah?",
+           "o": [
+            "8",
+            "3",
+            "6",
+            "5"
+           ],
+           "a": "8"
+          },
+          {
+           "t": "mcq",
+           "p": "Nombor terkecil ialah?",
+           "o": [
+            "1",
+            "9",
+            "7",
+            "4"
+           ],
+           "a": "1"
+          },
+          {
+           "t": "mcq",
+           "p": "Selepas 9 ialah?",
+           "o": [
+            "10",
+            "8",
+            "11",
+            "9"
+           ],
+           "a": "10"
+          },
+          {
+           "t": "type",
+           "p": "Taip nombor bagi perkataan 'tujuh'.",
+           "a": "7",
+           "accept": [
+            "7",
+            "tujuh"
+           ]
+          },
+          {
+           "t": "type",
+           "p": "Taip nombor bagi perkataan 'empat'.",
+           "a": "4",
+           "accept": [
+            "4",
+            "empat"
+           ]
+          }
+         ]
+        },
+        {
+         "id": "nombor-tambah-tolak-asas",
+         "name": "Tambah & tolak asas",
+         "questions": [
+          {
+           "t": "mcq",
+           "p": "3 + 2 = ?",
+           "o": [
+            "5",
+            "4",
+            "6",
+            "7"
+           ],
+           "a": "5"
+          },
+          {
+           "t": "mcq",
+           "p": "5 - 1 = ?",
+           "o": [
+            "4",
+            "6",
+            "5",
+            "3"
+           ],
+           "a": "4"
+          },
+          {
+           "t": "mcq",
+           "p": "2 + 2 + 1 = ?",
+           "o": [
+            "5",
+            "4",
+            "6",
+            "3"
+           ],
+           "a": "5"
+          },
+          {
+           "t": "mcq",
+           "p": "10 - 3 = ?",
+           "o": [
+            "7",
+            "6",
+            "8",
+            "9"
+           ],
+           "a": "7"
+          },
+          {
+           "t": "gen",
+           "gen": "math_add",
+           "max": 10
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "warna-bentuk",
+       "name": "Warna & Bentuk",
+       "topics": [
+        {
+         "id": "warna-bentuk-warna",
+         "name": "Kenal warna",
+         "questions": [
+          {
+           "t": "mcq",
+           "p": "Warna pisang yang masak ialah?",
+           "o": [
+            "Kuning",
+            "Biru",
+            "Hitam",
+            "Ungu"
+           ],
+           "a": "Kuning"
+          },
+          {
+           "t": "mcq",
+           "p": "Warna daun ialah?",
+           "o": [
+            "Hijau",
+            "Merah",
+            "Putih",
+            "Perang"
+           ],
+           "a": "Hijau"
+          },
+          {
+           "t": "mcq",
+           "p": "Warna susu segar ialah?",
+           "o": [
+            "Putih",
+            "Hitam",
+            "Merah",
+            "Biru"
+           ],
+           "a": "Putih"
+          },
+          {
+           "t": "mcq",
+           "p": "Warna langit pada siang hari yang cerah?",
+           "o": [
+            "Biru",
+            "Coklat",
+            "Ungu",
+            "Hijau"
+           ],
+           "a": "Biru"
+          },
+          {
+           "t": "mcq",
+           "p": "Merah + kuning menjadi warna apa?",
+           "o": [
+            "Oren",
+            "Ungu",
+            "Hijau",
+            "Hitam"
+           ],
+           "a": "Oren"
+          }
+         ]
+        },
+        {
+         "id": "warna-bentuk-bentuk",
+         "name": "Kenal bentuk",
+         "questions": [
+          {
+           "t": "mcq",
+           "p": "Bentuk bola ialah?",
+           "o": [
+            "Bulat",
+            "Segi empat",
+            "Segi tiga",
+            "Bujur"
+           ],
+           "a": "Bulat"
+          },
+          {
+           "t": "mcq",
+           "p": "Bentuk bumbung rumah biasanya?",
+           "o": [
+            "Segi tiga",
+            "Bulat",
+            "Segi empat",
+            "Bujur"
+           ],
+           "a": "Segi tiga"
+          },
+          {
+           "t": "mcq",
+           "p": "Berapa sisi segi tiga?",
+           "o": [
+            "3",
+            "4",
+            "5",
+            "2"
+           ],
+           "a": "3"
+          },
+          {
+           "t": "mcq",
+           "p": "Berapa sisi segi empat?",
+           "o": [
+            "4",
+            "3",
+            "5",
+            "6"
+           ],
+           "a": "4"
+          },
+          {
+           "t": "mcq",
+           "p": "Bentuk buku atau pintu ialah?",
+           "o": [
+            "Segi empat",
+            "Bulat",
+            "Segi tiga",
+            "Bujur"
+           ],
+           "a": "Segi empat"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "haiwan",
+       "name": "Haiwan & Bunyi",
+       "topics": [
+        {
+         "id": "haiwan-haiwan-asas",
+         "name": "Kenal haiwan",
+         "questions": [
+          {
+           "t": "mcq",
+           "p": "Bunyi 'meow' — haiwan apa?",
+           "o": [
+            "Kucing",
+            "Anjing",
+            "Lembu",
+            "Ayam"
+           ],
+           "a": "Kucing"
+          },
+          {
+           "t": "mcq",
+           "p": "Haiwan yang bertelur?",
+           "o": [
+            "Ayam",
+            "Kucing",
+            "Kambing",
+            "Lembu"
+           ],
+           "a": "Ayam"
+          },
+          {
+           "t": "mcq",
+           "p": "Haiwan yang tinggal di dalam air?",
+           "o": [
+            "Ikan",
+            "Kucing",
+            "Arnab",
+            "Ayam"
+           ],
+           "a": "Ikan"
+          },
+          {
+           "t": "mcq",
+           "p": "Haiwan paling besar?",
+           "o": [
+            "Gajah",
+            "Kucing",
+            "Tikus",
+            "Arnab"
+           ],
+           "a": "Gajah"
+          },
+          {
+           "t": "mcq",
+           "p": "Haiwan yang boleh terbang?",
+           "o": [
+            "Burung",
+            "Ikan",
+            "Kucing",
+            "Lembu"
+           ],
+           "a": "Burung"
+          },
+          {
+           "t": "mcq",
+           "p": "Haiwan yang beri susu dan berbunyi 'moo'?",
+           "o": [
+            "Lembu",
+            "Ayam",
+            "Ikan",
+            "Burung"
+           ],
+           "a": "Lembu"
+          },
+          {
+           "t": "mcq",
+           "p": "Berapa kaki ayam?",
+           "o": [
+            "2",
+            "4",
+            "6",
+            "8"
+           ],
+           "a": "2"
+          },
+          {
+           "t": "mcq",
+           "p": "Berapa kaki kucing?",
+           "o": [
+            "4",
+            "2",
+            "6",
+            "8"
+           ],
+           "a": "4"
+          },
+          {
+           "t": "mcq",
+           "p": "Haiwan yang hidup di air dan darat?",
+           "o": [
+            "Katak",
+            "Ikan",
+            "Burung",
+            "Kucing"
+           ],
+           "a": "Katak"
+          }
+         ]
+        },
+        {
+         "id": "haiwan-anak-haiwan",
+         "name": "Anak haiwan",
+         "questions": [
+          {
+           "t": "mcq",
+           "p": "Anak kucing dipanggil?",
+           "o": [
+            "Anak kucing",
+            "Anak ayam",
+            "Anak lembu",
+            "Anak itik"
+           ],
+           "a": "Anak kucing"
+          },
+          {
+           "t": "mcq",
+           "p": "Anak ayam dipanggil?",
+           "o": [
+            "Anak ayam",
+            "Anak kucing",
+            "Anak kambing",
+            "Anak ikan"
+           ],
+           "a": "Anak ayam"
+          },
+          {
+           "t": "mcq",
+           "p": "Anak lembu dipanggil?",
+           "o": [
+            "Anak lembu",
+            "Anak katak",
+            "Anak burung",
+            "Anak itik"
+           ],
+           "a": "Anak lembu"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "jawi-asas",
+       "name": "Jawi Asas",
+       "topics": [
+        {
+         "id": "jawi-asas-huruf-jawi",
+         "name": "Kenal huruf Jawi",
+         "questions": [
+          {
+           "t": "mcq",
+           "p": "Huruf Jawi yang pertama ialah?",
+           "o": [
+            "ا",
+            "ب",
+            "ت",
+            "ن"
+           ],
+           "a": "ا",
+           "dir": "rtl"
+          },
+          {
+           "t": "mcq",
+           "p": "Huruf 'ba' dalam Jawi ialah?",
+           "o": [
+            "ب",
+            "ت",
+            "ن",
+            "ي"
+           ],
+           "a": "ب",
+           "dir": "rtl"
+          },
+          {
+           "t": "mcq",
+           "p": "Huruf bernama 'jim' ialah?",
+           "o": [
+            "ج",
+            "ح",
+            "خ",
+            "د"
+           ],
+           "a": "ج",
+           "dir": "rtl"
+          },
+          {
+           "t": "mcq",
+           "p": "Huruf bernama 'mim' ialah?",
+           "o": [
+            "م",
+            "ن",
+            "و",
+            "ه"
+           ],
+           "a": "م",
+           "dir": "rtl"
+          },
+          {
+           "t": "mcq",
+           "p": "Huruf Jawi dibaca dari arah mana?",
+           "o": [
+            "Kanan ke kiri",
+            "Kiri ke kanan"
+           ],
+           "a": "Kanan ke kiri"
+          },
+          {
+           "t": "mcq",
+           "p": "Berapa huruf hijaiyah asas?",
+           "o": [
+            "28",
+            "26",
+            "30",
+            "36"
+           ],
+           "a": "28"
+          }
+         ]
+        },
+        {
+         "id": "jawi-asas-perkataan-jawi",
+         "name": "Perkataan Jawi mudah",
+         "questions": [
+          {
+           "t": "mcq",
+           "p": "Perkataan 'buku' dalam Jawi ialah?",
+           "o": [
+            "بوکو",
+            "باتو",
+            "سوسو",
+            "ناسي"
+           ],
+           "a": "بوکو",
+           "dir": "rtl"
+          },
+          {
+           "t": "mcq",
+           "p": "Perkataan 'makan' dalam Jawi ialah?",
+           "o": [
+            "ماکن",
+            "ماتا",
+            "ناسي",
+            "باجو"
+           ],
+           "a": "ماکن",
+           "dir": "rtl"
+          },
+          {
+           "t": "mcq",
+           "p": "Perkataan 'nasi' dalam Jawi ialah?",
+           "o": [
+            "ناسي",
+            "ايکن",
+            "باجو",
+            "روتي"
+           ],
+           "a": "ناسي",
+           "dir": "rtl"
+          },
+          {
+           "t": "mcq",
+           "p": "Perkataan 'susu' dalam Jawi ialah?",
+           "o": [
+            "سوسو",
+            "باتو",
+            "کاکي",
+            "ماتا"
+           ],
+           "a": "سوسو",
+           "dir": "rtl"
+          },
+          {
+           "t": "mcq",
+           "p": "Perkataan Jawi 'باتو' ialah?",
+           "o": [
+            "Batu",
+            "Buku",
+            "Baju",
+            "Bunga"
+           ],
+           "a": "Batu"
+          },
+          {
+           "t": "mcq",
+           "p": "Perkataan Jawi 'ایکن' ialah?",
+           "o": [
+            "Ikan",
+            "Awan",
+            "Emas",
+            "Itik"
+           ],
+           "a": "Ikan"
+          },
+          {
+           "t": "mcq",
+           "p": "Perkataan Jawi 'روما' — ejaan Rumi-nya?",
+           "o": [
+            "Ruma",
+            "Rami",
+            "Remi",
+            "Rama"
+           ],
+           "a": "Ruma"
+          },
+          {
+           "t": "mcq",
+           "p": "Perkataan 'bunga' dalam Jawi ialah?",
+           "o": [
+            "بوڠا",
+            "بوکو",
+            "باڤ",
+            "باجو"
+           ],
+           "a": "بوڠا",
+           "dir": "rtl"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "doa-harian",
+       "name": "Doa & Adab Harian",
+       "topics": [
+        {
+         "id": "doa-harian-doa",
+         "name": "Doa harian",
+         "questions": [
+          {
+           "t": "mcq",
+           "p": "Sebelum makan kita membaca?",
+           "o": [
+            "Bismillah",
+            "Alhamdulillah",
+            "Subhanallah",
+            "Astaghfirullah"
+           ],
+           "a": "Bismillah"
+          },
+          {
+           "t": "mcq",
+           "p": "Selepas makan kita membaca?",
+           "o": [
+            "Alhamdulillah",
+            "Bismillah",
+            "Allahuakbar",
+            "InshaAllah"
+           ],
+           "a": "Alhamdulillah"
+          },
+          {
+           "t": "mcq",
+           "p": "Sebelum keluar rumah kita membaca?",
+           "o": [
+            "Bismillah",
+            "Alhamdulillah",
+            "Amin",
+            "Wallahualam"
+           ],
+           "a": "Bismillah"
+          },
+          {
+           "t": "mcq",
+           "p": "Ucapan salam ialah?",
+           "o": [
+            "Assalamualaikum",
+            "Selamat datang",
+            "Terima kasih",
+            "Apa khabar"
+           ],
+           "a": "Assalamualaikum"
+          },
+          {
+           "t": "mcq",
+           "p": "Bila bersin kita mengucap?",
+           "o": [
+            "Alhamdulillah",
+            "Bismillah",
+            "Subhanallah",
+            "Amin"
+           ],
+           "a": "Alhamdulillah"
+          }
+         ]
+        },
+        {
+         "id": "doa-harian-adab",
+         "name": "Adab harian",
+         "questions": [
+          {
+           "t": "mcq",
+           "p": "Makan menggunakan tangan?",
+           "o": [
+            "Kanan",
+            "Kiri",
+            "Dua-dua tangan"
+           ],
+           "a": "Kanan"
+          },
+          {
+           "t": "mcq",
+           "p": "Ucapan bila masuk rumah orang?",
+           "o": [
+            "Assalamualaikum",
+            "Hello",
+            "Bye",
+            "Terima kasih"
+           ],
+           "a": "Assalamualaikum"
+          },
+          {
+           "t": "mcq",
+           "p": "Bila ibu bapa panggil, kita?",
+           "o": [
+            "Terus datang",
+            "Buat tak dengar",
+            "Main lagi"
+           ],
+           "a": "Terus datang"
+          },
+          {
+           "t": "mcq",
+           "p": "Bercakap dengan guru guna suara?",
+           "o": [
+            "Sopan",
+            "Kuat",
+            "Kasar"
+           ],
+           "a": "Sopan"
+          },
+          {
+           "t": "mcq",
+           "p": "Jika mahu barang kawan, kita?",
+           "o": [
+            "Minta izin",
+            "Rampas",
+            "Sorok"
+           ],
+           "a": "Minta izin"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sk",
+   "name": "Sekolah Kebangsaan",
+   "tagline": "KSSR · Tahun 1–6",
+   "levels": [
+    {
+     "id": "tahun1",
+     "name": "Tahun 1",
+     "subjects": [
+      {
+       "id": "bm",
+       "name": "Bahasa Melayu",
+       "topics": [
+        {
+         "id": "bm-suku-kata",
+         "name": "Suku kata",
+         "questions": [
+          {
+           "t": "mcq",
+           "p": "Perkataan 'buku' ada berapa suku kata?",
+           "o": [
+            "2",
+            "1",
+            "3",
+            "4"
+           ],
+           "a": "2"
+          },
+          {
+           "t": "mcq",
+           "p": "Perkataan 'sekolah' ada berapa suku kata?",
+           "o": [
+            "3",
+            "2",
+            "4",
+            "1"
+           ],
+           "a": "3"
+          },
+          {
+           "t": "mcq",
+           "p": "Perkataan 'meja' ada berapa suku kata?",
+           "o": [
+            "2",
+            "1",
+            "3",
+            "4"
+           ],
+           "a": "2"
+          },
+          {
+           "t": "mcq",
+           "p": "Suku kata pertama bagi 'kerusi' ialah?",
+           "o": [
+            "ke",
+            "ru",
+            "si",
+            "ker"
+           ],
+           "a": "ke"
+          },
+          {
+           "t": "mcq",
+           "p": "Cantumkan 'bu' + 'ku' menjadi?",
+           "o": [
+            "buku",
+            "baku",
+            "bukuu",
+            "buko"
+           ],
+           "a": "buku"
+          }
+         ]
+        },
+        {
+         "id": "bm-ejaan-vokal",
+         "name": "Ejaan & vokal",
+         "questions": [
+          {
+           "t": "mcq",
+           "p": "Pilih ejaan yang betul.",
+           "o": [
+            "bola",
+            "bolaa",
+            "bolah",
+            "bollah"
+           ],
+           "a": "bola"
+          },
+          {
+           "t": "mcq",
+           "p": "Huruf vokal dalam 'makan' ada berapa?",
+           "o": [
+            "2",
+            "1",
+            "3",
+            "4"
+           ],
+           "a": "2"
+          },
+          {
+           "t": "mcq",
+           "p": "Berapa huruf dalam perkataan 'sekolah'?",
+           "o": [
+            "7",
+            "6",
+            "8",
+            "5"
+           ],
+           "a": "7"
+          },
+          {
+           "t": "mcq",
+           "p": "Lawan kata bagi 'besar' ialah?",
+           "o": [
+            "kecil",
+            "tinggi",
+            "panjang",
+            "berat"
+           ],
+           "a": "kecil"
+          },
+          {
+           "t": "mcq",
+           "p": "Lawan kata bagi 'pandai' ialah?",
+           "o": [
+            "bodoh",
+            "rajin",
+            "kuat",
+            "baik"
+           ],
+           "a": "bodoh"
+          },
+          {
+           "t": "type",
+           "p": "Taip nama haiwan yang berbunyi 'meow'.",
+           "a": "kucing",
+           "accept": [
+            "kucing",
+            "Kucing"
+           ]
+          },
+          {
+           "t": "type",
+           "p": "Taip nama tempat kita belajar.",
+           "a": "sekolah",
+           "accept": [
+            "sekolah",
+            "Sekolah"
+           ]
+          }
+         ]
+        },
+        {
+         "id": "bm-kata-nama",
+         "name": "Kata nama & tatabahasa",
+         "questions": [
+          {
+           "t": "mcq",
+           "p": "Yang mana kata nama?",
+           "o": [
+            "meja",
+            "makan",
+            "cantik",
+            "lari"
+           ],
+           "a": "meja"
+          },
+          {
+           "t": "mcq",
+           "p": "Yang mana kata kerja?",
+           "o": [
+            "berlari",
+            "meja",
+            "merah",
+            "baju"
+           ],
+           "a": "berlari"
+          },
+          {
+           "t": "mcq",
+           "p": "Yang mana kata sifat?",
+           "o": [
+            "cantik",
+            "buku",
+            "lari",
+            "rumah"
+           ],
+           "a": "cantik"
+          },
+          {
+           "t": "mcq",
+           "p": "Kata ganda bagi 'kura' ialah?",
+           "o": [
+            "kura-kura",
+            "kurakura",
+            "kura kuraa",
+            "kuraa"
+           ],
+           "a": "kura-kura"
+          },
+          {
+           "t": "mcq",
+           "p": "Kata ganda bagi 'biri' ialah?",
+           "o": [
+            "biri-biri",
+            "biribiri",
+            "biri biri",
+            "birii"
+           ],
+           "a": "biri-biri"
+          },
+          {
+           "t": "mcq",
+           "p": "Perkataan 'ibu' merujuk kepada?",
+           "o": [
+            "ibu bapa",
+            "kawan",
+            "guru",
+            "jiran"
+           ],
+           "a": "ibu bapa"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "matematik",
+       "name": "Matematik",
+       "topics": [
+        {
+         "id": "matematik-nombor",
+         "name": "Nombor & nilai",
+         "questions": [
+          {
+           "t": "mcq",
+           "p": "Mana lebih besar: 14 atau 9?",
+           "o": [
+            "14",
+            "9"
+           ],
+           "a": "14"
+          },
+          {
+           "t": "mcq",
+           "p": "Mana lebih besar: 7 atau 11?",
+           "o": [
+            "11",
+            "7"
+           ],
+           "a": "11"
+          },
+          {
+           "t": "mcq",
+           "p": "Nombor selepas 19 ialah?",
+           "o": [
+            "20",
+            "18",
+            "21",
+            "29"
+           ],
+           "a": "20"
+          },
+          {
+           "t": "mcq",
+           "p": "10 lebih 1 sama dengan?",
+           "o": [
+            "11",
+            "9",
+            "10",
+            "1"
+           ],
+           "a": "11"
+          },
+          {
+           "t": "type",
+           "p": "Taip hasil 10 + 10.",
+           "a": "20",
+           "accept": [
+            "20",
+            "dua puluh"
+           ]
+          }
+         ]
+        },
+        {
+         "id": "matematik-operasi",
+         "name": "Tambah & tolak (latihan tanpa had)",
+         "questions": [
+          {
+           "t": "gen",
+           "gen": "math_add",
+           "max": 20
+          },
+          {
+           "t": "gen",
+           "gen": "math_sub",
+           "max": 20
+          },
+          {
+           "t": "gen",
+           "gen": "math_add",
+           "max": 100
+          }
+         ]
+        },
+        {
+         "id": "matematik-masa-ukuran",
+         "name": "Masa & ukuran asas",
+         "questions": [
+          {
+           "t": "mcq",
+           "p": "Bilangan hari dalam seminggu?",
+           "o": [
+            "7",
+            "5",
+            "6",
+            "10"
+           ],
+           "a": "7"
+          },
+          {
+           "t": "mcq",
+           "p": "Pukul tiga petang ditulis?",
+           "o": [
+            "3:00",
+            "12:03",
+            "30:00",
+            "0:03"
+           ],
+           "a": "3:00"
+          },
+          {
+           "t": "mcq",
+           "p": "Bilangan bulan dalam setahun?",
+           "o": [
+            "12",
+            "10",
+            "6",
+            "24"
+           ],
+           "a": "12"
+          },
+          {
+           "t": "mcq",
+           "p": "Mana lebih panjang: 1 meter atau 1 sentimeter?",
+           "o": [
+            "1 meter",
+            "1 sentimeter"
+           ],
+           "a": "1 meter"
+          },
+          {
+           "t": "mcq",
+           "p": "Bilangan jam dalam sehari?",
+           "o": [
+            "24",
+            "12",
+            "60",
+            "30"
+           ],
+           "a": "24"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "english",
+       "name": "English",
+       "topics": [
+        {
+         "id": "english-vocabulary",
+         "name": "Vocabulary",
+         "questions": [
+          {
+           "t": "mcq",
+           "p": "What is 'buku' in English?",
+           "o": [
+            "book",
+            "ball",
+            "bag",
+            "box"
+           ],
+           "a": "book"
+          },
+          {
+           "t": "mcq",
+           "p": "What is 'meja' in English?",
+           "o": [
+            "table",
+            "chair",
+            "door",
+            "window"
+           ],
+           "a": "table"
+          },
+          {
+           "t": "mcq",
+           "p": "What is 'air' in English?",
+           "o": [
+            "water",
+            "fire",
+            "air",
+            "wind"
+           ],
+           "a": "water"
+          },
+          {
+           "t": "mcq",
+           "p": "Which word is a colour?",
+           "o": [
+            "red",
+            "run",
+            "rice",
+            "road"
+           ],
+           "a": "red"
+          },
+          {
+           "t": "mcq",
+           "p": "Which word is a fruit?",
+           "o": [
+            "apple",
+            "chair",
+            "book",
+            "table"
+           ],
+           "a": "apple"
+          },
+          {
+           "t": "mcq",
+           "p": "'Selamat pagi' in English is?",
+           "o": [
+            "Good morning",
+            "Good night",
+            "Goodbye",
+            "Good evening"
+           ],
+           "a": "Good morning"
+          }
+         ]
+        },
+        {
+         "id": "english-abc-spelling",
+         "name": "ABC & spelling",
+         "questions": [
+          {
+           "t": "mcq",
+           "p": "A, B, C, D — what comes next?",
+           "o": [
+            "E",
+            "F",
+            "G",
+            "H"
+           ],
+           "a": "E"
+          },
+          {
+           "t": "mcq",
+           "p": "How many legs does a cat have?",
+           "o": [
+            "four",
+            "two",
+            "six",
+            "eight"
+           ],
+           "a": "four"
+          },
+          {
+           "t": "type",
+           "p": "Spell the number 3 in words.",
+           "a": "three",
+           "accept": [
+            "three",
+            "Three"
+           ]
+          },
+          {
+           "t": "type",
+           "p": "Spell the colour of the sky on a clear day.",
+           "a": "blue",
+           "accept": [
+            "blue",
+            "Blue"
+           ]
+          },
+          {
+           "t": "mcq",
+           "p": "Which letter is a vowel?",
+           "o": [
+            "e",
+            "k",
+            "m",
+            "t"
+           ],
+           "a": "e"
+          },
+          {
+           "t": "mcq",
+           "p": "How many letters are in the English alphabet?",
+           "o": [
+            "26",
+            "24",
+            "28",
+            "30"
+           ],
+           "a": "26"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "sains",
+       "name": "Sains",
+       "topics": [
+        {
+         "id": "sains-diri-saya",
+         "name": "Diri saya",
+         "questions": [
+          {
+           "t": "mcq",
+           "p": "Organ untuk melihat ialah?",
+           "o": [
+            "mata",
+            "telinga",
+            "hidung",
+            "mulut"
+           ],
+           "a": "mata"
+          },
+          {
+           "t": "mcq",
+           "p": "Organ untuk mendengar ialah?",
+           "o": [
+            "telinga",
+            "mata",
+            "lidah",
+            "kulit"
+           ],
+           "a": "telinga"
+          },
+          {
+           "t": "mcq",
+           "p": "Organ untuk menghidu ialah?",
+           "o": [
+            "hidung",
+            "mata",
+            "kaki",
+            "tangan"
+           ],
+           "a": "hidung"
+          },
+          {
+           "t": "mcq",
+           "p": "Anggota untuk berjalan ialah?",
+           "o": [
+            "kaki",
+            "tangan",
+            "kepala",
+            "perut"
+           ],
+           "a": "kaki"
+          },
+          {
+           "t": "mcq",
+           "p": "Anggota untuk memegang ialah?",
+           "o": [
+            "tangan",
+            "kaki",
+            "kepala",
+            "pinggang"
+           ],
+           "a": "tangan"
+          }
+         ]
+        },
+        {
+         "id": "sains-benda-hidup",
+         "name": "Benda hidup & keperluan",
+         "questions": [
+          {
+           "t": "mcq",
+           "p": "Benda hidup perlukan apa untuk hidup?",
+           "o": [
+            "air",
+            "batu",
+            "kayu",
+            "plastik"
+           ],
+           "a": "air"
+          },
+          {
+           "t": "mcq",
+           "p": "Tumbuhan perlukan apa untuk membuat makanan?",
+           "o": [
+            "cahaya matahari",
+            "bulan",
+            "angin",
+            "batu"
+           ],
+           "a": "cahaya matahari"
+          },
+          {
+           "t": "mcq",
+           "p": "Bahagian pokok yang menyerap air ialah?",
+           "o": [
+            "akar",
+            "daun",
+            "bunga",
+            "buah"
+           ],
+           "a": "akar"
+          },
+          {
+           "t": "mcq",
+           "p": "Haiwan yang hidup di air dan darat?",
+           "o": [
+            "katak",
+            "ikan",
+            "kucing",
+            "burung"
+           ],
+           "a": "katak"
+          },
+          {
+           "t": "mcq",
+           "p": "Mana yang benda hidup?",
+           "o": [
+            "pokok",
+            "kerusi",
+            "batu",
+            "botol"
+           ],
+           "a": "pokok"
+          },
+          {
+           "t": "mcq",
+           "p": "Mana yang benda bukan hidup?",
+           "o": [
+            "batu",
+            "pokok",
+            "kucing",
+            "pokok bunga"
+           ],
+           "a": "batu"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "pendidikan-islam",
+       "name": "Pendidikan Islam",
+       "topics": [
+        {
+         "id": "pendidikan-islam-rukun",
+         "name": "Rukun Islam & Iman",
+         "questions": [
+          {
+           "t": "mcq",
+           "p": "Berapa rukun Islam?",
+           "o": [
+            "5",
+            "6",
+            "4",
+            "3"
+           ],
+           "a": "5"
+          },
+          {
+           "t": "mcq",
+           "p": "Rukun Islam yang pertama ialah?",
+           "o": [
+            "Syahadah",
+            "Solat",
+            "Zakat",
+            "Haji"
+           ],
+           "a": "Syahadah"
+          },
+          {
+           "t": "mcq",
+           "p": "Berapa rukun iman?",
+           "o": [
+            "6",
+            "5",
+            "4",
+            "7"
+           ],
+           "a": "6"
+          },
+          {
+           "t": "mcq",
+           "p": "Rukun iman yang pertama ialah percaya kepada?",
+           "o": [
+            "Allah",
+            "malaikat",
+            "kitab",
+            "nabi"
+           ],
+           "a": "Allah"
+          },
+          {
+           "t": "mcq",
+           "p": "Berapa kali solat fardu dalam sehari?",
+           "o": [
+            "5",
+            "3",
+            "7",
+            "6"
+           ],
+           "a": "5"
+          }
+         ]
+        },
+        {
+         "id": "pendidikan-islam-asas-ibadah",
+         "name": "Asas ibadah",
+         "questions": [
+          {
+           "t": "mcq",
+           "p": "Kita bersuci menggunakan?",
+           "o": [
+            "air",
+            "pasir",
+            "angin",
+            "minyak"
+           ],
+           "a": "air"
+          },
+          {
+           "t": "mcq",
+           "p": "Kitab suci orang Islam ialah?",
+           "o": [
+            "Al-Quran",
+            "buku cerita",
+            "majalah",
+            "kamus"
+           ],
+           "a": "Al-Quran"
+          },
+          {
+           "t": "mcq",
+           "p": "Sebelum solat kita mengambil?",
+           "o": [
+            "wuduk",
+            "makan",
+            "tidur",
+            "buku"
+           ],
+           "a": "wuduk"
+          },
+          {
+           "t": "mcq",
+           "p": "Arah kiblat orang Islam ialah?",
+           "o": [
+            "Kaabah",
+            "Madinah",
+            "Mesir",
+            "Turki"
+           ],
+           "a": "Kaabah"
+          },
+          {
+           "t": "mcq",
+           "p": "Bulan puasa orang Islam ialah?",
+           "o": [
+            "Ramadan",
+            "Syawal",
+            "Muharram",
+            "Rejab"
+           ],
+           "a": "Ramadan"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "tahun2",
+     "name": "Tahun 2",
+     "soon": true,
+     "subjects": []
+    }
+   ]
+  },
+  {
+   "id": "agama",
+   "name": "Sekolah Agama",
+   "tagline": "KSRA / KAFA · Darjah 1–6",
+   "levels": [
+    {
+     "id": "darjah1",
+     "name": "Darjah 1",
+     "subjects": [
+      {
+       "id": "jawi",
+       "name": "Jawi",
+       "topics": [
+        {
+         "id": "jawi-huruf-jawi",
+         "name": "Nama huruf Jawi",
+         "questions": [
+          {
+           "t": "mcq",
+           "p": "Huruf 'ج' bernama?",
+           "o": [
+            "Jim",
+            "Ha",
+            "Kha",
+            "Dal"
+           ],
+           "a": "Jim"
+          },
+          {
+           "t": "mcq",
+           "p": "Huruf 'ح' bernama?",
+           "o": [
+            "Ha",
+            "Jim",
+            "Kha",
+            "Ain"
+           ],
+           "a": "Ha"
+          },
+          {
+           "t": "mcq",
+           "p": "Huruf 'خ' bernama?",
+           "o": [
+            "Kha",
+            "Ha",
+            "Ghain",
+            "Jim"
+           ],
+           "a": "Kha"
+          },
+          {
+           "t": "mcq",
+           "p": "Huruf 'ع' bernama?",
+           "o": [
+            "Ain",
+            "Ghain",
+            "Ha",
+            "Hamzah"
+           ],
+           "a": "Ain"
+          },
+          {
+           "t": "mcq",
+           "p": "Huruf 'غ' bernama?",
+           "o": [
+            "Ghain",
+            "Ain",
+            "Kha",
+            "Qaf"
+           ],
+           "a": "Ghain"
+          },
+          {
+           "t": "mcq",
+           "p": "Huruf 'چ' bernama?",
+           "o": [
+            "Ca",
+            "Jim",
+            "Nya",
+            "Nga"
+           ],
+           "a": "Ca"
+          },
+          {
+           "t": "mcq",
+           "p": "Huruf 'ݢ' bernama?",
+           "o": [
+            "Ga",
+            "Kaf",
+            "Nga",
+            "Pa"
+           ],
+           "a": "Ga"
+          },
+          {
+           "t": "mcq",
+           "p": "Huruf 'ڠ' bernama?",
+           "o": [
+            "Nga",
+            "Nya",
+            "Ga",
+            "Nun"
+           ],
+           "a": "Nga"
+          },
+          {
+           "t": "mcq",
+           "p": "Huruf 'ڤ' bernama?",
+           "o": [
+            "Pa",
+            "Fa",
+            "Ba",
+            "Va"
+           ],
+           "a": "Pa"
+          },
+          {
+           "t": "mcq",
+           "p": "Huruf 'ڽ' bernama?",
+           "o": [
+            "Nya",
+            "Nga",
+            "Ya",
+            "Nun"
+           ],
+           "a": "Nya"
+          }
+         ]
+        },
+        {
+         "id": "jawi-sambung-jawi",
+         "name": "Sambung huruf & perkataan",
+         "questions": [
+          {
+           "t": "mcq",
+           "p": "Perkataan 'ibu' dalam Jawi ialah?",
+           "o": [
+            "ايبو",
+            "باڤ",
+            "ابو",
+            "ايبا"
+           ],
+           "a": "ايبو",
+           "dir": "rtl"
+          },
+          {
+           "t": "mcq",
+           "p": "Perkataan 'bapa' dalam Jawi ialah?",
+           "o": [
+            "باڤ",
+            "با",
+            "ايبو",
+            "باڤا"
+           ],
+           "a": "باڤ",
+           "dir": "rtl"
+          },
+          {
+           "t": "mcq",
+           "p": "Perkataan 'emas' dalam Jawi ialah?",
+           "o": [
+            "امس",
+            "اماس",
+            "ايمس",
+            "همس"
+           ],
+           "a": "امس",
+           "dir": "rtl"
+          },
+          {
+           "t": "mcq",
+           "p": "Perkataan Jawi 'ايبو' ialah?",
+           "o": [
+            "Ibu",
+            "Bapa",
+            "Emak",
+            "Kakak"
+           ],
+           "a": "Ibu"
+          },
+          {
+           "t": "mcq",
+           "p": "Perkataan Jawi 'روتي' ialah?",
+           "o": [
+            "Roti",
+            "Rata",
+            "Roti kayu",
+            "Reti"
+           ],
+           "a": "Roti"
+          },
+          {
+           "t": "mcq",
+           "p": "Perkataan 'baju' dalam Jawi ialah?",
+           "o": [
+            "باجو",
+            "باجا",
+            "بوجو",
+            "باجي"
+           ],
+           "a": "باجو",
+           "dir": "rtl"
+          },
+          {
+           "t": "mcq",
+           "p": "Huruf Jawi ditulis dari arah?",
+           "o": [
+            "Kanan ke kiri",
+            "Kiri ke kanan"
+           ],
+           "a": "Kanan ke kiri"
+          },
+          {
+           "t": "type",
+           "p": "Taip huruf Jawi pertama (alif) dengan papan kekunci Arab/Jawi.",
+           "a": "ا",
+           "accept": [
+            "ا"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "alquran",
+       "name": "Al-Quran (Iqra)",
+       "topics": [
+        {
+         "id": "alquran-huruf-hijaiyah",
+         "name": "Huruf hijaiyah",
+         "questions": [
+          {
+           "t": "mcq",
+           "p": "Selepas huruf 'ا' (alif) ialah?",
+           "o": [
+            "ب",
+            "ت",
+            "ث",
+            "ج"
+           ],
+           "a": "ب",
+           "dir": "rtl"
+          },
+          {
+           "t": "mcq",
+           "p": "Sebelum huruf 'ت' (ta) ialah?",
+           "o": [
+            "ب",
+            "ث",
+            "ج",
+            "ا"
+           ],
+           "a": "ب",
+           "dir": "rtl"
+          },
+          {
+           "t": "mcq",
+           "p": "Huruf hijaiyah yang terakhir ialah?",
+           "o": [
+            "ي",
+            "و",
+            "ه",
+            "ن"
+           ],
+           "a": "ي",
+           "dir": "rtl"
+          },
+          {
+           "t": "mcq",
+           "p": "Huruf 'د' bernama?",
+           "o": [
+            "Dal",
+            "Dzal",
+            "Ra",
+            "Zai"
+           ],
+           "a": "Dal"
+          },
+          {
+           "t": "mcq",
+           "p": "Huruf 'ذ' bernama?",
+           "o": [
+            "Dzal",
+            "Dal",
+            "Zai",
+            "Syin"
+           ],
+           "a": "Dzal"
+          },
+          {
+           "t": "mcq",
+           "p": "Berapa huruf hijaiyah?",
+           "o": [
+            "28",
+            "26",
+            "30",
+            "36"
+           ],
+           "a": "28"
+          },
+          {
+           "t": "mcq",
+           "p": "Huruf 'ف' bernama?",
+           "o": [
+            "Fa",
+            "Qaf",
+            "Wau",
+            "Pa"
+           ],
+           "a": "Fa"
+          },
+          {
+           "t": "mcq",
+           "p": "Huruf 'ق' bernama?",
+           "o": [
+            "Qaf",
+            "Fa",
+            "Kaf",
+            "Nun"
+           ],
+           "a": "Qaf"
+          }
+         ]
+        },
+        {
+         "id": "alquran-baris",
+         "name": "Baris & bacaan",
+         "questions": [
+          {
+           "t": "mcq",
+           "p": "Baris di atas huruf dipanggil?",
+           "o": [
+            "Fathah",
+            "Kasrah",
+            "Dhammah",
+            "Sukun"
+           ],
+           "a": "Fathah"
+          },
+          {
+           "t": "mcq",
+           "p": "Baris di bawah huruf dipanggil?",
+           "o": [
+            "Kasrah",
+            "Fathah",
+            "Dhammah",
+            "Sabdu"
+           ],
+           "a": "Kasrah"
+          },
+          {
+           "t": "mcq",
+           "p": "Baris di hadapan huruf dipanggil?",
+           "o": [
+            "Dhammah",
+            "Fathah",
+            "Kasrah",
+            "Mad"
+           ],
+           "a": "Dhammah"
+          },
+          {
+           "t": "mcq",
+           "p": "بَ dibaca?",
+           "o": [
+            "ba",
+            "bi",
+            "bu",
+            "b"
+           ],
+           "a": "ba"
+          },
+          {
+           "t": "mcq",
+           "p": "بِ dibaca?",
+           "o": [
+            "bi",
+            "ba",
+            "bu",
+            "b"
+           ],
+           "a": "bi"
+          },
+          {
+           "t": "mcq",
+           "p": "بُ dibaca?",
+           "o": [
+            "bu",
+            "ba",
+            "bi",
+            "b"
+           ],
+           "a": "bu"
+          },
+          {
+           "t": "mcq",
+           "p": "Tanda sabdu (shadda) bermaksud?",
+           "o": [
+            "Huruf dibaca ditekan",
+            "Huruf dibaca panjang",
+            "Huruf dibaca pendek"
+           ],
+           "a": "Huruf dibaca ditekan"
+          },
+          {
+           "t": "mcq",
+           "p": "Bacaan panjang dipanggil?",
+           "o": [
+            "Mad",
+            "Sukun",
+            "Sabdu",
+            "Tanwin"
+           ],
+           "a": "Mad"
+          },
+          {
+           "t": "mcq",
+           "p": "Huruf bertanda sukun (ْ) bermaksud?",
+           "o": [
+            "Huruf dimatikan",
+            "Huruf dibaca panjang",
+            "Huruf dibaca dua kali"
+           ],
+           "a": "Huruf dimatikan"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "akidah",
+       "name": "Akidah",
+       "topics": [
+        {
+         "id": "akidah-rukun-iman",
+         "name": "Rukun Iman",
+         "questions": [
+          {
+           "t": "mcq",
+           "p": "Berapa rukun iman?",
+           "o": [
+            "6",
+            "5",
+            "4",
+            "3"
+           ],
+           "a": "6"
+          },
+          {
+           "t": "mcq",
+           "p": "Rukun iman pertama ialah percaya kepada?",
+           "o": [
+            "Allah",
+            "malaikat",
+            "kitab",
+            "hari akhirat"
+           ],
+           "a": "Allah"
+          },
+          {
+           "t": "mcq",
+           "p": "Rukun iman kedua ialah percaya kepada?",
+           "o": [
+            "malaikat",
+            "Allah",
+            "qada dan qadar",
+            "nabi"
+           ],
+           "a": "malaikat"
+          },
+          {
+           "t": "mcq",
+           "p": "Siapakah Tuhan kita?",
+           "o": [
+            "Allah",
+            "malaikat",
+            "nabi",
+            "manusia"
+           ],
+           "a": "Allah"
+          },
+          {
+           "t": "mcq",
+           "p": "Nabi dan rasul yang terakhir ialah?",
+           "o": [
+            "Nabi Muhammad",
+            "Nabi Isa",
+            "Nabi Musa",
+            "Nabi Adam"
+           ],
+           "a": "Nabi Muhammad"
+          },
+          {
+           "t": "mcq",
+           "p": "Berapa nabi dan rasul yang wajib kita ketahui?",
+           "o": [
+            "25",
+            "10",
+            "40",
+            "124"
+           ],
+           "a": "25"
+          },
+          {
+           "t": "mcq",
+           "p": "Allah Maha Mendengar bermaksud nama Allah?",
+           "o": [
+            "As-Sami'",
+            "Al-Basir",
+            "Al-Alim",
+            "Al-Khabir"
+           ],
+           "a": "As-Sami'"
+          },
+          {
+           "t": "mcq",
+           "p": "Allah Maha Melihat bermaksud nama Allah?",
+           "o": [
+            "Al-Basir",
+            "As-Sami'",
+            "Ar-Rahman",
+            "Al-Malik"
+           ],
+           "a": "Al-Basir"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "ibadah",
+       "name": "Ibadah",
+       "topics": [
+        {
+         "id": "ibadah-rukun-islam",
+         "name": "Rukun Islam",
+         "questions": [
+          {
+           "t": "mcq",
+           "p": "Berapa rukun Islam?",
+           "o": [
+            "5",
+            "6",
+            "4",
+            "3"
+           ],
+           "a": "5"
+          },
+          {
+           "t": "mcq",
+           "p": "Rukun Islam yang pertama ialah?",
+           "o": [
+            "Syahadah",
+            "Solat",
+            "Puasa",
+            "Zakat"
+           ],
+           "a": "Syahadah"
+          },
+          {
+           "t": "mcq",
+           "p": "Rukun Islam yang kedua ialah?",
+           "o": [
+            "Solat",
+            "Zakat",
+            "Haji",
+            "Puasa"
+           ],
+           "a": "Solat"
+          },
+          {
+           "t": "mcq",
+           "p": "Rukun Islam yang keempat ialah?",
+           "o": [
+            "Puasa",
+            "Zakat",
+            "Haji",
+            "Solat"
+           ],
+           "a": "Puasa"
+          }
+         ]
+        },
+        {
+         "id": "ibadah-solat-wuduk",
+         "name": "Solat & wuduk",
+         "questions": [
+          {
+           "t": "mcq",
+           "p": "Sebelum solat kita mengambil?",
+           "o": [
+            "Wuduk",
+            "Makan",
+            "Rehat",
+            "Buku"
+           ],
+           "a": "Wuduk"
+          },
+          {
+           "t": "mcq",
+           "p": "Anggota pertama dibasuh ketika wuduk ialah?",
+           "o": [
+            "muka",
+            "kaki",
+            "perut",
+            "belakang"
+           ],
+           "a": "muka"
+          },
+          {
+           "t": "mcq",
+           "p": "Berapa rakaat solat Subuh?",
+           "o": [
+            "2",
+            "3",
+            "4",
+            "5"
+           ],
+           "a": "2"
+          },
+          {
+           "t": "mcq",
+           "p": "Berapa rakaat solat Maghrib?",
+           "o": [
+            "3",
+            "2",
+            "4",
+            "5"
+           ],
+           "a": "3"
+          },
+          {
+           "t": "mcq",
+           "p": "Berapa rakaat solat Zuhur?",
+           "o": [
+            "4",
+            "2",
+            "3",
+            "5"
+           ],
+           "a": "4"
+          },
+          {
+           "t": "mcq",
+           "p": "Berapa rakaat solat Isyak?",
+           "o": [
+            "4",
+            "2",
+            "3",
+            "5"
+           ],
+           "a": "4"
+          },
+          {
+           "t": "mcq",
+           "p": "Solat dijalankan menghadap arah?",
+           "o": [
+            "kiblat",
+            "pintu",
+            "tingkap",
+            "guru"
+           ],
+           "a": "kiblat"
+          },
+          {
+           "t": "mcq",
+           "p": "Bilangan solat fardu dalam sehari?",
+           "o": [
+            "5",
+            "3",
+            "4",
+            "6"
+           ],
+           "a": "5"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "sirah",
+       "name": "Sirah",
+       "topics": [
+        {
+         "id": "sirah-kelahiran-nabi",
+         "name": "Kelahiran Nabi",
+         "questions": [
+          {
+           "t": "mcq",
+           "p": "Nabi Muhammad SAW dilahirkan di?",
+           "o": [
+            "Makkah",
+            "Madinah",
+            "Mesir",
+            "Syam"
+           ],
+           "a": "Makkah"
+          },
+          {
+           "t": "mcq",
+           "p": "Tahun kelahiran Nabi dikenali sebagai?",
+           "o": [
+            "Tahun Gajah",
+            "Tahun Kuda",
+            "Tahun Unta",
+            "Tahun Biri-biri"
+           ],
+           "a": "Tahun Gajah"
+          },
+          {
+           "t": "mcq",
+           "p": "Nama ibu Nabi Muhammad ialah?",
+           "o": [
+            "Aminah",
+            "Khadijah",
+            "Aisyah",
+            "Halimah"
+           ],
+           "a": "Aminah"
+          },
+          {
+           "t": "mcq",
+           "p": "Nama ayah Nabi Muhammad ialah?",
+           "o": [
+            "Abdullah",
+            "Abdul Muttalib",
+            "Abu Talib",
+            "Abdul Rahman"
+           ],
+           "a": "Abdullah"
+          },
+          {
+           "t": "mcq",
+           "p": "Nabi disusukan oleh?",
+           "o": [
+            "Halimah Sa'diah",
+            "Aminah",
+            "Khadijah",
+            "Fatimah"
+           ],
+           "a": "Halimah Sa'diah"
+          },
+          {
+           "t": "mcq",
+           "p": "Datuk yang menjaga Nabi selepas ibunya meninggal?",
+           "o": [
+            "Abdul Muttalib",
+            "Abu Talib",
+            "Abdullah",
+            "Abu Bakar"
+           ],
+           "a": "Abdul Muttalib"
+          }
+         ]
+        },
+        {
+         "id": "sirah-wahyu-hijrah",
+         "name": "Wahyu & Hijrah",
+         "questions": [
+          {
+           "t": "mcq",
+           "p": "Nabi menerima wahyu pertama di gua?",
+           "o": [
+            "Hira",
+            "Thur",
+            "Uhud",
+            "Safa"
+           ],
+           "a": "Hira"
+          },
+          {
+           "t": "mcq",
+           "p": "Nabi berhijrah dari Makkah ke?",
+           "o": [
+            "Madinah",
+            "Mesir",
+            "Syam",
+            "Yaman"
+           ],
+           "a": "Madinah"
+          },
+          {
+           "t": "mcq",
+           "p": "Surah pertama diturunkan ialah?",
+           "o": [
+            "Al-Alaq",
+            "Al-Fatihah",
+            "Al-Ikhlas",
+            "An-Nas"
+           ],
+           "a": "Al-Alaq"
+          },
+          {
+           "t": "mcq",
+           "p": "Sahabat yang menemani Nabi berhijrah?",
+           "o": [
+            "Abu Bakar",
+            "Umar",
+            "Uthman",
+            "Ali"
+           ],
+           "a": "Abu Bakar"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "adab",
+       "name": "Adab",
+       "topics": [
+        {
+         "id": "adab-adab-harian",
+         "name": "Adab harian",
+         "questions": [
+          {
+           "t": "mcq",
+           "p": "Adab makan menggunakan tangan?",
+           "o": [
+            "Kanan",
+            "Kiri",
+            "Dua-dua tangan"
+           ],
+           "a": "Kanan"
+          },
+          {
+           "t": "mcq",
+           "p": "Sebelum makan kita membaca?",
+           "o": [
+            "Bismillah",
+            "Alhamdulillah",
+            "Subhanallah",
+            "Amin"
+           ],
+           "a": "Bismillah"
+          },
+          {
+           "t": "mcq",
+           "p": "Selepas makan kita membaca?",
+           "o": [
+            "Alhamdulillah",
+            "Bismillah",
+            "Astaghfirullah",
+            "Amin"
+           ],
+           "a": "Alhamdulillah"
+          },
+          {
+           "t": "mcq",
+           "p": "Bila bersin kita mengucap?",
+           "o": [
+            "Alhamdulillah",
+            "Bismillah",
+            "Subhanallah",
+            "InsyaAllah"
+           ],
+           "a": "Alhamdulillah"
+          },
+          {
+           "t": "mcq",
+           "p": "Adab terhadap guru ialah?",
+           "o": [
+            "Hormat",
+            "Cuek",
+            "Buat bising",
+            "Kacau"
+           ],
+           "a": "Hormat"
+          },
+          {
+           "t": "mcq",
+           "p": "Adab masuk rumah orang ialah?",
+           "o": [
+            "Beri salam",
+            "Masuk terus",
+            "Ketuk kuat",
+            "Jerit"
+           ],
+           "a": "Beri salam"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "bahasa-arab",
+       "name": "Bahasa Arab Asas",
+       "topics": [
+        {
+         "id": "bahasa-arab-kata-harian",
+         "name": "Kata harian",
+         "questions": [
+          {
+           "t": "mcq",
+           "p": "Perkataan Arab 'ماء' bermaksud?",
+           "o": [
+            "Air",
+            "Api",
+            "Angin",
+            "Tanah"
+           ],
+           "a": "Air"
+          },
+          {
+           "t": "mcq",
+           "p": "Perkataan Arab 'كتاب' bermaksud?",
+           "o": [
+            "Buku",
+            "Meja",
+            "Pintu",
+            "Kasut"
+           ],
+           "a": "Buku"
+          },
+          {
+           "t": "mcq",
+           "p": "Perkataan Arab 'شكرا' bermaksud?",
+           "o": [
+            "Terima kasih",
+            "Selamat datang",
+            "Apa khabar",
+            "Selamat malam"
+           ],
+           "a": "Terima kasih"
+          },
+          {
+           "t": "mcq",
+           "p": "Perkataan Arab 'مرحبا' bermaksud?",
+           "o": [
+            "Selamat datang",
+            "Terima kasih",
+            "Maaf",
+            "Tolong"
+           ],
+           "a": "Selamat datang"
+          },
+          {
+           "t": "mcq",
+           "p": "Perkataan Arab 'قلم' bermaksud?",
+           "o": [
+            "Pena",
+            "Buku",
+            "Meja",
+            "Beg"
+           ],
+           "a": "Pena"
+          },
+          {
+           "t": "mcq",
+           "p": "Perkataan Arab 'باب' bermaksud?",
+           "o": [
+            "Pintu",
+            "Tingkap",
+            "Bilik",
+            "Bumbung"
+           ],
+           "a": "Pintu"
+          }
+         ]
+        },
+        {
+         "id": "bahasa-arab-nombor-warna-arab",
+         "name": "Nombor & warna",
+         "questions": [
+          {
+           "t": "mcq",
+           "p": "Nombor satu dalam Arab ialah?",
+           "o": [
+            "Wahid",
+            "Ithnan",
+            "Thalatha",
+            "Arba'a"
+           ],
+           "a": "Wahid"
+          },
+          {
+           "t": "mcq",
+           "p": "Nombor dua dalam Arab ialah?",
+           "o": [
+            "Ithnan",
+            "Wahid",
+            "Khamsa",
+            "Sitta"
+           ],
+           "a": "Ithnan"
+          },
+          {
+           "t": "mcq",
+           "p": "Nombor tiga dalam Arab ialah?",
+           "o": [
+            "Thalatha",
+            "Arba'a",
+            "Khamsa",
+            "Sab'a"
+           ],
+           "a": "Thalatha"
+          },
+          {
+           "t": "mcq",
+           "p": "Warna merah dalam Arab ialah?",
+           "o": [
+            "Ahmar",
+            "Akhdar",
+            "Azraq",
+            "Aswad"
+           ],
+           "a": "Ahmar"
+          },
+          {
+           "t": "mcq",
+           "p": "Warna hijau dalam Arab ialah?",
+           "o": [
+            "Akhdar",
+            "Ahmar",
+            "Asfar",
+            "Abyad"
+           ],
+           "a": "Akhdar"
+          },
+          {
+           "t": "mcq",
+           "p": "Warna biru dalam Arab ialah?",
+           "o": [
+            "Azraq",
+            "Akhdar",
+            "Aswad",
+            "Abyad"
+           ],
+           "a": "Azraq"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "darjah2",
+     "name": "Darjah 2",
+     "soon": true,
+     "subjects": []
+    }
+   ]
+  }
+ ]
+}

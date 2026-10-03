@@ -1,0 +1,13 @@
+{
+  "name": "Kelas Nadi — Prasekolah · Sekolah Kebangsaan · Sekolah Agama",
+  "short_name": "Kelas Nadi",
+  "description": "Latihan percuma sekolah rendah Malaysia: Prasekolah, Sekolah Kebangsaan dan Sekolah Agama. Boleh cetak lembaran A4.",
+  "lang": "ms",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#f4f9f7",
+  "theme_color": "#145b50",
+  "icons": []
+}
