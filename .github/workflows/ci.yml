@@ -1,0 +1,32 @@
+name: CI
+
+on:
+  push:
+    branches: [main, stabilize-mvp]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Ujian kandungan, aset & PWA (Python)
+        run: python3 -m unittest discover -s tests -v
+
+      - name: Semak sintaks JavaScript
+        run: |
+          node --check core.js
+          node --check app.js
+          node --check sw.js
+
+      - name: Ujian regresi logik (Node)
+        run: node --test tests/core.test.js
