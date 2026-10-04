@@ -49,7 +49,7 @@ npm run test:e2e                             # 30 ujian E2E
 
 E2E (`tests/e2e/`) membuka app dalam Chromium, klik DOM sebenar dan menguji:
 aliran kuiz penuh, snapshot skop, cetakan (termasuk printToPDF), progress, kemas kini
-service worker (`v3.0.0 → v3.0.1`), offline sebenar (pelayan dimatikan) dan 5 viewport
+service worker (versi semasa → versi baru), offline sebenar (pelayan dimatikan) dan 5 viewport
 (360×800, 390×844, 412×915, tablet portrait, desktop).
 
 `puppeteer-core` ialah **devDependency sahaja** — ia tidak digunakan oleh app (app kekal

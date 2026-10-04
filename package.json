@@ -1,8 +1,8 @@
 {
   "name": "kelas-nadi",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "private": true,
-  "description": "Kelas Nadi — app latihan sekolah rendah (statik). package.json ini hanya untuk alat ujian/CI, bukan runtime app.",
+  "description": "Kelas Nadi \u2014 app latihan sekolah rendah (statik). package.json ini hanya untuk alat ujian/CI, bukan runtime app.",
   "scripts": {
     "test:unit": "python3 -m unittest discover -s tests -v",
     "test:logic": "node --test tests/core.test.js",
@@ -10,6 +10,6 @@
     "test": "npm run test:unit && npm run test:logic && npm run test:e2e"
   },
   "devDependencies": {
-    "puppeteer-core": "^23.0.0"
+    "puppeteer-core": "23.11.1"
   }
 }

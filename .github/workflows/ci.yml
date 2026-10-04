@@ -47,7 +47,7 @@ jobs:
         id: chrome
 
       - name: Pasang devDependencies
-        run: npm install --no-audit --no-fund
+        run: npm ci --no-audit --no-fund
 
       - name: E2E — chromium sebenar
         env:

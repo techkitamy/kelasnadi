@@ -1,5 +1,5 @@
 /* E2E kemas kini service worker (dev/CI sahaja)
-   Simulasi: user pakai v3.0.0 → deploy v3.0.1 → buka app → mesej versi baru → Muat semula
+   Simulasi: user pakai versi semasa → deploy versi baru → buka app → mesej versi baru → Muat semula
    → service worker baru aktif → versi baru digunakan → TIADA reload loop. */
 'use strict';
 const test = require('node:test');
@@ -49,7 +49,7 @@ test.after(async () => {
   if (staging) fs.rmSync(staging, { recursive: true, force: true });
 });
 
-test('kemas kini SW: v3.0.0 → v3.0.1 → Muat semula → aktif, tiada reload loop', { timeout: 90000 }, async () => {
+test('kemas kini SW: versi semasa → versi baru → Muat semula → aktif, tiada reload loop', { timeout: 90000 }, async () => {
   const page = await H.newPage(browser, { width: 390, height: 844 });
   await H.openApp(page, base + '/');
 

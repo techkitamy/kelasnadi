@@ -3,7 +3,7 @@
 > **Belum diuji pada peranti sebenar.** Ujian automatik hanya Chromium — Safari/iOS
 > mempunyai gelagat PWA yang berbeza (tiada `beforeinstallprompt`, audio perlu sentuhan
 > pengguna, SW kadang perlukan buka semula app). Tandakan bila anda sudah cuba.
-> URL: https://techkitamy.github.io/kelasnadi/ — Versi app: **3.0.0**
+> URL: https://techkitamy.github.io/kelasnadi/ — Versi semasa: semak `version.json`
 
 Peranti: ______________  Versi iOS: ________  Tarikh: __________
 

@@ -2,7 +2,7 @@
 
 > **Belum diuji pada peranti sebenar** kecuali dinyatakan. Ujian automatik hanya dijalankan
 > pada Chromium headless. Tandakan setiap baris bila anda sendiri sudah cuba.
-> URL: https://techkitamy.github.io/kelasnadi/ — Versi app: **3.0.0** (lihat `version.json`)
+> URL: https://techkitamy.github.io/kelasnadi/ — Versi semasa: semak `version.json`
 
 Peranti diuji: ______________________  Versi Android: __________  Pelayar: ______________  Tarikh: __________
 
